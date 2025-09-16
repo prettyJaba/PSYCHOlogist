@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://dm8ygtq257inl"]
+
+[ext_resource type="Script" path="res://scripts/notes.gd" id="1_n30n6"]
+[ext_resource type="Texture2D" uid="uid://cyugag6ke31vp" path="res://sprites/items/E9XW05pjGaM.jpg" id="2_rpq3x"]
+[ext_resource type="Texture2D" uid="uid://dw2plxmsomuu2" path="res://sprites/items/20220327_151936.jpg" id="3_rkuug"]
+[ext_resource type="Script" path="res://scripts/monitor.gd" id="4_ya2mp"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_kwbhh"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_b1cek"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_e1tpt"]
+
+[node name="firstPerson" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(12.4919, 8.25245)
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 500.0
+offset_bottom = 77.0
+
+[node name="Table" type="Node2D" parent="."]
+position = Vector2(252, 411)
+
+[node name="Sprite2D" type="Sprite2D" parent="Table"]
+position = Vector2(6.19888e-06, 0.500013)
+scale = Vector2(504, 163)
+texture = SubResource("CanvasTexture_kwbhh")
+
+[node name="Notes" type="Node2D" parent="Table"]
+position = Vector2(178, 14)
+script = ExtResource("1_n30n6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Table/Notes"]
+modulate = Color(0.384535, 0.762724, 0.605349, 1)
+position = Vector2(1.00001, 0.499991)
+scale = Vector2(102, 129)
+texture = SubResource("CanvasTexture_b1cek")
+
+[node name="OpenButton" type="TextureButton" parent="Table/Notes"]
+offset_left = -50.0
+offset_top = -63.0
+offset_right = 980.0
+offset_bottom = 598.0
+scale = Vector2(0.099672, 0.19112)
+action_mode = 0
+texture_normal = ExtResource("2_rpq3x")
+stretch_mode = 0
+
+[node name="CloseButton" type="TextureButton" parent="Table/Notes"]
+offset_left = 53.0
+offset_top = -76.0
+offset_right = 225.0
+offset_bottom = 96.0
+scale = Vector2(-0.116903, -0.0964793)
+action_mode = 0
+texture_normal = ExtResource("3_rkuug")
+stretch_mode = 0
+
+[node name="PC" type="Node2D" parent="Table"]
+position = Vector2(-150, -80)
+
+[node name="monitor" type="Sprite2D" parent="Table/PC"]
+modulate = Color(0, 0.358952, 0.359157, 1)
+position = Vector2(0.702694, 0.594588)
+scale = Vector2(-201.381, 169.867)
+texture = SubResource("CanvasTexture_e1tpt")
+
+[node name="TextureButton" type="TextureButton" parent="Table/PC"]
+offset_left = -100.0
+offset_top = -85.0
+offset_right = 100.0
+offset_bottom = 85.0
+script = ExtResource("4_ya2mp")
+
+[node name="Patient" type="Node2D" parent="."]
+position = Vector2(262, 184)
+
+[connection signal="pressed" from="Table/Notes/OpenButton" to="Table/Notes" method="_on_open_button_pressed"]
+[connection signal="pressed" from="Table/Notes/CloseButton" to="Table/Notes" method="_on_close_button_pressed"]

@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6r05vca1fs7u"]
+
+[ext_resource type="Script" path="res://scripts/cabinet.gd" id="1_gist0"]
+[ext_resource type="PackedScene" uid="uid://cud641jyjb6sm" path="res://scenes/player.tscn" id="2_wsetx"]
+[ext_resource type="Texture2D" uid="uid://b1xkpgflrb4mf" path="res://sprites/background/room.bmp" id="3_gwylw"]
+[ext_resource type="PackedScene" uid="uid://cya508uj8ajgm" path="res://scenes/interactable_object.tscn" id="4_e428s"]
+[ext_resource type="Texture2D" uid="uid://dw2plxmsomuu2" path="res://sprites/items/20220327_151936.jpg" id="5_sntbk"]
+[ext_resource type="Texture2D" uid="uid://cyugag6ke31vp" path="res://sprites/items/E9XW05pjGaM.jpg" id="6_krfjt"]
+
+[node name="cabinet" type="Node"]
+script = ExtResource("1_gist0")
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(388, 393)
+
+[node name="Player" parent="." groups=["player"] instance=ExtResource("2_wsetx")]
+z_index = 1
+position = Vector2(437, 382)
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+show_behind_parent = true
+clip_children = 2
+position = Vector2(5, -2)
+scale = Vector2(0.140625, 0.247685)
+texture = ExtResource("3_gwylw")
+centered = false
+
+[node name="InteractableObject" parent="." instance=ExtResource("4_e428s")]
+position = Vector2(201, 177)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="InteractableObject"]
+
+[node name="Panel" type="Panel" parent="InteractableObject/CanvasLayer"]
+visible = false
+offset_left = 1.0
+offset_top = 465.0
+offset_right = 541.0
+offset_bottom = 505.0
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InteractableObject/CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 538.0
+offset_bottom = 41.0
+
+[node name="Sprite2D" type="Sprite2D" parent="InteractableObject"]
+texture = ExtResource("5_sntbk")
+
+[node name="InteractableObject2" parent="." instance=ExtResource("4_e428s")]
+position = Vector2(210, 439)
+scale = Vector2(0.4, 0.4)
+text_lines = Array[String](["МЯу мяу мяу мяу", "ААА щшатцошщ оооо"])
+
+[node name="CanvasLayer" type="CanvasLayer" parent="InteractableObject2"]
+
+[node name="Panel" type="Panel" parent="InteractableObject2/CanvasLayer"]
+visible = false
+offset_left = 1.0
+offset_top = 465.0
+offset_right = 541.0
+offset_bottom = 505.0
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InteractableObject2/CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 538.0
+offset_bottom = 41.0
+
+[node name="Sprite2D" type="Sprite2D" parent="InteractableObject2"]
+position = Vector2(1.57356e-05, 2.5)
+scale = Vector2(0.182488, 0.268702)
+texture = ExtResource("6_krfjt")
