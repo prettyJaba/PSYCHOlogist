@@ -1,3 +1,5 @@
+# начала реализовывать, но нужно переделывать сильно...
+
 extends Node
 
 class_name DialogueManager

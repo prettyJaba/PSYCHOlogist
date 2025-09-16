@@ -12,10 +12,10 @@ var current_text_index = 0
 var typing_speed = 0.05  # Скорость печати (секунды между буквами)
 var is_typing = false  # Флаг, чтобы не прерывать печать
 
-@onready var label = $CanvasLayer/Panel/RichTextLabel  # Подпишись на UI-элементы
+@onready var label = $CanvasLayer/Panel/RichTextLabel
 @onready var panel = $CanvasLayer/Panel
-@onready var sprite = $Sprite2D  # Получаем спрайт
-@onready var type_sound = $TypeSound  # Добавь `AudioStreamPlayer`
+@onready var sprite = $Sprite2D
+@onready var type_sound = $TypeSound
 
 func _ready():
 	panel.visible = false  # Скрываем текстовое окно в начале

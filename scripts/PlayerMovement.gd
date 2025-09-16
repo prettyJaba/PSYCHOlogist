@@ -13,7 +13,7 @@ func _ready():
 
 
 func _process(delta):
-	var velocity = Vector2.ZERO # The player's movement vector.
+	var velocity = Vector2.ZERO
 	
 	if Input.is_action_pressed(&"right"):
 		update_sprite(Vector2(1, 0))
@@ -75,7 +75,7 @@ func _process(delta):
 		update_sprite(direction)
 
 	velocity = direction * speed
-	move_and_slide()  # Теперь игрок учитывает коллизии
+	move_and_slide()
 
 func update_sprite(direction: Vector2) -> void:
 	if direction in sprites:
