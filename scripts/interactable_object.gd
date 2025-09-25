@@ -15,11 +15,9 @@ var is_typing = false  # Флаг, чтобы не прерывать печат
 @onready var label = $CanvasLayer/Panel/RichTextLabel
 @onready var panel = $CanvasLayer/Panel
 @onready var sprite = $Sprite2D
-@onready var type_sound = $TypeSound
 
 func _ready():
 	panel.visible = false  # Скрываем текстовое окно в начале
-
 	
 func _process(delta):
 	if player_in_area and Input.is_action_just_pressed("interact"):
@@ -52,8 +50,7 @@ func type_text(full_text):
 		if not is_typing:
 			return
 		label.text += full_text[i]  # Добавляем по одной букве
-		if type_sound:
-			type_sound.play()
+		SoundManager.play_sfx("text")
 		await get_tree().create_timer(typing_speed).timeout  # Ждём
 		
 		if Input.is_action_just_pressed("interact"):

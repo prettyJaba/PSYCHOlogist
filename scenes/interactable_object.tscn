@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cya508uj8ajgm"]
 
 [ext_resource type="Script" path="res://scripts/interactable_object.gd" id="1_r8tak"]
-[ext_resource type="AudioStream" uid="uid://bgulh06x8fab7" path="res://sounds/Press button.mp3" id="2_r3i3d"]
+[ext_resource type="AudioStream" uid="uid://bgulh06x8fab7" path="res://sounds/sfx/Press button.mp3" id="2_r3i3d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xep0e"]
 size = Vector2(203, 197)
