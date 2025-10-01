@@ -39,7 +39,6 @@ func play_music(name: String, loop := true):
 	if music_player.stream != track:
 		music_player.stop()
 		music_player.stream = track
-	music_player.loop = loop
 	music_player.play()
 	
 func stop_music():
@@ -75,7 +74,7 @@ func apply_volumes():
 # сюда нужно загрузить все звуки/музыку
 func init_tracks():
 	# Музыка
-	
+
 	# Звуки
 	register_sfx("text", "res://sounds/sfx/Press button.mp3")
 	
