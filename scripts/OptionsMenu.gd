@@ -1,7 +1,7 @@
 extends PopupPanel
 
-@onready var music_slider: HSlider = $TabContainer/AudioTab/HBoxContainer/HSlider
-@onready var sfx_slider: HSlider = $TabContainer/AudioTab/HBoxContainer2/HSlider
+@onready var music_slider: HSlider = $TabContainer/AudioTab/HBoxContainer/MarginContainer2/HSlider
+@onready var sfx_slider: HSlider = $TabContainer/AudioTab/HBoxContainer2/MarginContainer2/HSlider
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

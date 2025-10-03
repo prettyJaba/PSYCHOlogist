@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://cftiftdwtafru"]
+[gd_scene load_steps=6 format=3 uid="uid://cftiftdwtafru"]
 
 [ext_resource type="Script" path="res://scripts/OptionsMenu.gd" id="1_23v2r"]
+[ext_resource type="FontFile" uid="uid://cj6p6mvtslqc8" path="res://style/fonts/ShareTechMono.otf" id="2_4u7x3"]
+[ext_resource type="Texture2D" uid="uid://c2bftgms368k1" path="res://style/slider/Grabber.png" id="3_enums"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6a7ne"]
+bg_color = Color(0.594448, 0.258733, 0.854812, 1)
+border_width_left = 3
+border_width_top = 9
+border_width_bottom = 1
+border_color = Color(0.30455, 0.159674, 0.421254, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyhl2"]
+bg_color = Color(0.612813, 0.23654, 0.628135, 1)
+border_width_top = 9
+border_width_bottom = 1
+border_color = Color(0.279101, 0.150605, 0.369153, 1)
 
 [node name="OptionsMenu" type="PopupPanel"]
 position = Vector2i(50, 50)
@@ -14,14 +29,14 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = 4.0
-offset_top = -196.0
-offset_right = -4.0
-offset_bottom = 196.0
+offset_top = 4.0
+offset_right = 396.0
+offset_bottom = 396.0
 grow_horizontal = 2
 grow_vertical = 2
 current_tab = 1
 
-[node name="GraphicsTab" type="VBoxContainer" parent="TabContainer"]
+[node name="GraphicTab" type="VBoxContainer" parent="TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 0
@@ -34,29 +49,64 @@ metadata/_tab_index = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="TabContainer/AudioTab/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/AudioTab/HBoxContainer"]
 layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="Label" type="Label" parent="TabContainer/AudioTab/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_4u7x3")
+theme_override_font_sizes/font_size = 20
 text = "Музыка"
 
-[node name="HSlider" type="HSlider" parent="TabContainer/AudioTab/HBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="TabContainer/AudioTab/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_right = 10
+
+[node name="HSlider" type="HSlider" parent="TabContainer/AudioTab/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_icons/grabber = ExtResource("3_enums")
+theme_override_icons/grabber_highlight = ExtResource("3_enums")
+theme_override_styles/slider = SubResource("StyleBoxFlat_6a7ne")
 max_value = 1.0
 step = 0.01
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="TabContainer/AudioTab"]
+layout_direction = 2
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 6
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.4
 
-[node name="Label" type="Label" parent="TabContainer/AudioTab/HBoxContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/AudioTab/HBoxContainer2"]
 layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="Label" type="Label" parent="TabContainer/AudioTab/HBoxContainer2/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_4u7x3")
+theme_override_font_sizes/font_size = 20
 text = "Эффекты"
 
-[node name="HSlider" type="HSlider" parent="TabContainer/AudioTab/HBoxContainer2"]
+[node name="MarginContainer2" type="MarginContainer" parent="TabContainer/AudioTab/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_right = 10
+
+[node name="HSlider" type="HSlider" parent="TabContainer/AudioTab/HBoxContainer2/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_icons/grabber = ExtResource("3_enums")
+theme_override_icons/grabber_highlight = ExtResource("3_enums")
+theme_override_styles/slider = SubResource("StyleBoxFlat_fyhl2")
 max_value = 1.0
 step = 0.01
