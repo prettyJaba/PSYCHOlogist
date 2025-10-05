@@ -1,15 +1,9 @@
-# начала реализовывать, но нужно переделывать сильно...
-
 extends Node
 
 class_name DialogueManager
 
 var dialogues = {}          # Словарь со всеми диалогами
 var current_id: String = "" # Текущий узел диалога
-
-func _ready():
-	load_dialogues("res://data/dialogues.json")
-	start("start")
 
 # Загружаем JSON
 func load_dialogues(path: String):
@@ -21,18 +15,19 @@ func load_dialogues(path: String):
 			push_error("Ошибка загрузки JSON!")
 			dialogues = {}
 
-# Начать диалог с узла
+# Начать диалог с узла 
 func start(dialogue_id: String):
 	if dialogue_id in dialogues:
 		current_id = dialogue_id
 	else:
 		push_error("Диалог не найден: " + dialogue_id)
 
-# Получить текущую реплику
+# Получить текущий узел
 func get_current():
 	if current_id in dialogues:
 		return dialogues[current_id]
-	return null
+	push_error("Диалог не найден: " + current_id)
+	#return null
 
 # Перейти к следующему узлу (без выборов)
 func next():
@@ -50,4 +45,4 @@ func choose(index: int):
 		if index >= 0 and index < choices.size():
 			current_id = choices[index]["next"]
 		else:
-			push_warning("Неверный выбор: " + str(index))
+			push_warning("Такого выбора нет: " + str(index))
