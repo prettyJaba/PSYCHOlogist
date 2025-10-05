@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://dujvktpkrb4ot"]
+
+[ext_resource type="Script" uid="uid://ds5o0g886d2e2" path="res://scripts/ResolutionSettings.gd" id="1_m17lk"]
+
+[node name="ResolutionSettings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m17lk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Screen Settings"
+horizontal_alignment = 1
+
+[node name="HBoxContainer (Res)" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer (Res)"]
+layout_mode = 2
+text = "Resolution"
+
+[node name="OptionButton (Res)" type="OptionButton" parent="VBoxContainer/HBoxContainer (Res)"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="HBoxContainer (Wmod)" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer (Wmod)"]
+layout_mode = 2
+text = "Screen mode"
+
+[node name="OptionButton (Wmod)" type="OptionButton" parent="VBoxContainer/HBoxContainer (Wmod)"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="ApplyButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Apply settings"
