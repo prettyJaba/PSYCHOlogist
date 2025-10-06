@@ -74,9 +74,13 @@ func apply_volumes():
 # сюда нужно загрузить все звуки/музыку
 func init_tracks():
 	# Музыка
+	register_music("main", "res://sounds/music/Peritune_Moonlit_Overture-chosic.com_.mp3")
 
 	# Звуки
 	register_sfx("text", "res://sounds/sfx/Press button.mp3")
+	register_sfx("clock", "res://sounds/sfx/clock-tick.mp3")
+	register_sfx("street", "res://sounds/sfx/a79e810c8566eee.mp3")
+	register_sfx("step", "res://sounds/sfx/slow-careful-step.mp3")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:

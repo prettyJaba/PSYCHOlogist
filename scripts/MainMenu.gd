@@ -3,7 +3,7 @@ extends Control
 @onready var options_menu = $OptionsMenu
 
 func _ready() -> void:
-	pass # Replace with function body.
+	SoundManager.play_music("main")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

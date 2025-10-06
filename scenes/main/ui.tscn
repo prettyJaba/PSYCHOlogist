@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjflobvs47vvv"]
+
+[ext_resource type="Script" path="res://scripts/DialogueManager.gd" id="1_kiug4"]
+[ext_resource type="FontFile" uid="uid://cj6p6mvtslqc8" path="res://style/fonts/ShareTechMono.otf" id="2_jgirf"]
+
+[node name="UI" type="Node2D"]
+script = ExtResource("1_kiug4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+visible = false
+clip_children = 2
+clip_contents = true
+offset_left = 24.0
+offset_top = 775.0
+offset_right = 1267.0
+offset_bottom = 910.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Panel"]
+clip_contents = false
+layout_mode = 0
+offset_right = 1242.0
+offset_bottom = 135.0
+theme_override_fonts/normal_font = ExtResource("2_jgirf")
+theme_override_fonts/mono_font = ExtResource("2_jgirf")
+theme_override_fonts/italics_font = ExtResource("2_jgirf")
+theme_override_fonts/bold_italics_font = ExtResource("2_jgirf")
+theme_override_fonts/bold_font = ExtResource("2_jgirf")
+theme_override_font_sizes/normal_font_size = 48

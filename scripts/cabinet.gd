@@ -2,30 +2,16 @@ extends Node
 
 func _ready():
 	new_game()
+	SoundManager.stop_music()
 	
-	print("--- Тест диалог менеджера ---")
-	Dialogues.load_dialogues("res://resources/DialogueResource.json")
-	Dialogues.start("start")
-	var current = Dialogues.get_current()
-	print("Говорящий:", current.get("speaker"))
-	print("Текст:", current.get("text"))
-	
-	# Варианты выбора
-	for i in range(current["choices"].size()):
-		print(str(i) + ": " + current["choices"][i]["text"])
-
-	# Тест выбора игрока
-	Dialogues.choose(1)
-
-	# Проверка работы выбора
-	current = Dialogues.get_current()
-	print("-- После выбора --")
-	print("Говорящий:", current.get("speaker"))
-	print("Текст:", current.get("text"))
-
+	for obj in get_tree().get_nodes_in_group("interactable"):
+		Dialogues.connect_object(obj)
+	Dialogues._init_ui()
 
 func new_game():
-	$Player.start($StartPosition.position)
+	$SubViewport/cabinet_inside/Player.start($StartPosition.position)
+	SoundManager.play_sfx("street")
+	SoundManager.play_sfx("clock")
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("menu"):
