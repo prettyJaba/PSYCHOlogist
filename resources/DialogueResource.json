@@ -1,17 +1,26 @@
-// V - виктор, F - федя, K - коля, Y - юля, N
-// desc - описания, dial - диалоги, choice - выборы
 {
-  "dial_F_1": {
-	"speaker": "V",
-	"text": "Добро пожаловать в мой кабинет...",
-	"choices": ["choice_1", "choice_2"]
+  "start": {
+		"speaker": "V",
+		"text": "Добро пожаловать в мой кабинет...",
+		"choices": [
+			{"text": "Спросить о прошлых пациентах", "next": "choice_1"},
+			{"text": "Посмотреть в окно", "next": "choice_2"}
+		]
   },
+
   "choice_1": {
-	"text": "Спросить о прошлых пациентах",
-	"next": "dialogue_2"
+		"speaker": "...",
+		"text": "О пациентах",
+		"choices": [
+			{"text": "Продолжить", "next": "dialogue_2"}
+		]
   },
+
   "choice_2": {
-	"text": "Посмотреть в окно",
-	"next": "dialogue_3"
+		"speaker": "...",
+		"text": "Вид из окна",
+		"choices": [
+			{"text": "Продолжить", "next": "dialogue_3"}
+		]
   }
 }

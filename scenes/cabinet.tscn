@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c6r05vca1fs7u"]
 
-[ext_resource type="Script" path="res://scripts/cabinet.gd" id="1_gist0"]
+[ext_resource type="Script" uid="uid://df26grptvd5n4" path="res://scripts/cabinet.gd" id="1_gist0"]
 [ext_resource type="PackedScene" uid="uid://cud641jyjb6sm" path="res://scenes/player.tscn" id="2_wsetx"]
 [ext_resource type="Texture2D" uid="uid://b1xkpgflrb4mf" path="res://sprites/background/room.bmp" id="3_gwylw"]
 [ext_resource type="PackedScene" uid="uid://cya508uj8ajgm" path="res://scenes/interactable_object.tscn" id="4_e428s"]
@@ -16,7 +16,7 @@ position = Vector2(388, 393)
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("2_wsetx")]
 z_index = 1
-position = Vector2(437, 382)
+position = Vector2(439, 382)
 scale = Vector2(3, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
