@@ -9,7 +9,7 @@ func _ready():
 	Dialogues._init_ui()
 
 func new_game():
-	$SubViewport/cabinet_inside/Player.start($StartPosition.position)
+	$SubViewport/cabinet_inside/Player.start($SubViewport/cabinet_inside/StartPosition.position)
 	SoundManager.play_sfx("street")
 	SoundManager.play_sfx("clock")
 

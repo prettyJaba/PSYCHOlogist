@@ -18,6 +18,8 @@ func _process(delta: float) -> void:
 	if not can_move:
 		velocity = Vector2.ZERO
 		move_and_slide()
+		play_idle_animation()
+		step_timer.stop()  # прекращаем шаги
 		return
 
 	var direction := Vector2.ZERO

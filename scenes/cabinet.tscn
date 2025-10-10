@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c6r05vca1fs7u"]
 
-[ext_resource type="Script" path="res://scripts/cabinet.gd" id="1_gist0"]
+[ext_resource type="Script" uid="uid://df26grptvd5n4" path="res://scripts/cabinet.gd" id="1_gist0"]
 [ext_resource type="PackedScene" uid="uid://bjflobvs47vvv" path="res://scenes/main/ui.tscn" id="2_7bgj6"]
 [ext_resource type="PackedScene" uid="uid://cgsfxh4tpnqt4" path="res://scenes/cabinet_inside.tscn" id="3_bn5ou"]
 [ext_resource type="PackedScene" uid="uid://cftiftdwtafru" path="res://scenes/main/options_menu.tscn" id="7_v4di0"]
@@ -27,11 +27,8 @@ offset_bottom = 924.0
 texture = SubResource("ViewportTexture_yu7lo")
 stretch_mode = 4
 
-[node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(55, 81)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("7_v4di0")]
-transparent_bg = true
 initial_position = 1
+visible = false

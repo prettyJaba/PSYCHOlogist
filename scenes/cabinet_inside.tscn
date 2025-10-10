@@ -112,6 +112,7 @@ text_lines = Array[String](["Так много книг. Каждый кореш
 [node name="CollisionShape2D" parent="Library/Area2D" index="0"]
 position = Vector2(1.5, 15)
 shape = SubResource("RectangleShape2D_2nwij")
+debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Library/StaticBody2D" index="0"]
 position = Vector2(2, 6.875)
@@ -131,6 +132,7 @@ collision_size = Vector2(100, 200)
 [node name="CollisionShape2D" parent="Table/Area2D" index="0"]
 position = Vector2(1, 8.5)
 shape = SubResource("RectangleShape2D_umjh4")
+debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Table/StaticBody2D" index="0"]
 position = Vector2(0.5, 11.5)
@@ -150,6 +152,7 @@ text_lines = Array[String](["Я только пришел, мне незачем
 [node name="CollisionShape2D" parent="Door/Area2D" index="0"]
 position = Vector2(3, 14.25)
 shape = SubResource("RectangleShape2D_6le0h")
+debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Door/StaticBody2D" index="0"]
 position = Vector2(3, 8.125)
@@ -169,6 +172,7 @@ text_lines = Array[String](["Стоит вынести мусор после п�
 [node name="CollisionShape2D" parent="Trashbin/Area2D" index="0"]
 position = Vector2(-3, 0)
 shape = SubResource("RectangleShape2D_l3i7f")
+debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Trashbin/StaticBody2D" index="0"]
 position = Vector2(2.5, 0.5)
@@ -188,6 +192,7 @@ text_lines = Array[String](["Ничем не примечательный вид
 [node name="CollisionShape2D" parent="Window/Area2D" index="0"]
 position = Vector2(2.5, 24)
 shape = SubResource("RectangleShape2D_lbl87")
+debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Window/StaticBody2D" index="0"]
 position = Vector2(4, -9)
@@ -207,6 +212,7 @@ text_lines = Array[String](["Мое социальное доказательс�
 [node name="CollisionShape2D" parent="Certificates/Area2D" index="0"]
 position = Vector2(3.25, 29.5)
 shape = SubResource("RectangleShape2D_yjgfs")
+debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Certificates/StaticBody2D" index="0"]
 position = Vector2(4, -5)
@@ -226,6 +232,7 @@ text_lines = Array[String](["Так много книг. Каждый кореш
 [node name="CollisionShape2D" parent="Chair/Area2D" index="0"]
 position = Vector2(-87, -75)
 shape = SubResource("RectangleShape2D_t4w50")
+debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Chair/StaticBody2D" index="0"]
 position = Vector2(3.5, -1.125)
@@ -245,6 +252,7 @@ text_lines = Array[String](["Так много книг. Каждый кореш
 [node name="CollisionShape2D" parent="Closet/Area2D" index="0"]
 position = Vector2(-158, -26)
 shape = SubResource("RectangleShape2D_kkq63")
+debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Closet/StaticBody2D" index="0"]
 position = Vector2(2, -0.5)
@@ -256,6 +264,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("11_2h27k")
 
 [node name="Flower" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
+z_index = -3
 position = Vector2(164, 118)
 scale = Vector2(0.8, 0.8)
 text_lines = Array[String](["Фикус. Любимое домашнее растение моей матери.", "Никогда не любил фикусы"])
@@ -263,6 +272,7 @@ text_lines = Array[String](["Фикус. Любимое домашнее рас�
 [node name="CollisionShape2D" parent="Flower/Area2D" index="0"]
 position = Vector2(-2, 10.5)
 shape = SubResource("RectangleShape2D_i1jvc")
+debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Flower/StaticBody2D" index="0"]
 position = Vector2(1, 9.5)
@@ -304,6 +314,9 @@ shape = SubResource("SegmentShape2D_om0he")
 [node name="InvisibleWall3" type="CollisionShape2D" parent="Walls"]
 position = Vector2(-44, -25)
 shape = SubResource("SegmentShape2D_7lw1u")
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(186, 146)
 
 [editable path="Library"]
 [editable path="Table"]
