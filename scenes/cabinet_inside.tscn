@@ -1,7 +1,7 @@
-[gd_scene load_steps=38 format=3 uid="uid://cgsfxh4tpnqt4"]
+[gd_scene load_steps=39 format=3 uid="uid://cgsfxh4tpnqt4"]
 
 [ext_resource type="PackedScene" uid="uid://cud641jyjb6sm" path="res://scenes/mechanics/player.tscn" id="1_ieijp"]
-[ext_resource type="Texture2D" uid="uid://b877l75avfdsf" path="res://sprites/background/Комната.png" id="2_8r181"]
+[ext_resource type="Texture2D" uid="uid://c2iucd0l4myuw" path="res://sprites/items/Комната.png" id="2_i1xny"]
 [ext_resource type="PackedScene" uid="uid://cya508uj8ajgm" path="res://scenes/mechanics/interactable_object.tscn" id="3_0jqlk"]
 [ext_resource type="Texture2D" uid="uid://c7oxrw8eh00rj" path="res://sprites/items/КнижныйШкаф.png" id="4_wk054"]
 [ext_resource type="Texture2D" uid="uid://dpjt348cimcd5" path="res://sprites/items/Рабочееместо.png" id="5_oyjbg"]
@@ -12,20 +12,21 @@
 [ext_resource type="Texture2D" uid="uid://d2eal71amtgb3" path="res://sprites/items/Стул.png" id="10_60yx0"]
 [ext_resource type="Texture2D" uid="uid://bmbprm43uin7r" path="res://sprites/items/Тумба.png" id="11_2h27k"]
 [ext_resource type="Texture2D" uid="uid://7rjcjsel5h41" path="res://sprites/items/ЦветокНапольный.png" id="12_r88g7"]
-[ext_resource type="Texture2D" uid="uid://cr07ou2ebrcy1" path="res://sprites/items/Цветок.png" id="13_ppq43"]
+[ext_resource type="Texture2D" uid="uid://m6bkicf8gu4s" path="res://sprites/items/Переключатель.png" id="13_o1j7o"]
+[ext_resource type="Texture2D" uid="uid://c5c4yracv5ae8" path="res://sprites/items/КартинкаУдвери.png" id="14_bcta6"]
 [ext_resource type="Texture2D" uid="uid://1m3iwmawr35n" path="res://sprites/items/Ковер.png" id="14_ec10y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nwij"]
 size = Vector2(47, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2sm7"]
-size = Vector2(46, 50.25)
+size = Vector2(35, 42.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umjh4"]
 size = Vector2(54, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o0pta"]
-size = Vector2(53, 37)
+size = Vector2(57, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6le0h"]
 size = Vector2(28, 33.5)
@@ -37,7 +38,7 @@ size = Vector2(26, 31.75)
 size = Vector2(12, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pphmq"]
-size = Vector2(11, 17)
+size = Vector2(10, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbl87"]
 size = Vector2(55, 28)
@@ -46,7 +47,7 @@ size = Vector2(55, 28)
 size = Vector2(13, 18.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjgfs"]
-size = Vector2(45.5, 75)
+size = Vector2(45.5, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d72y1"]
 size = Vector2(13, 18.5)
@@ -55,25 +56,25 @@ size = Vector2(13, 18.5)
 size = Vector2(2, 2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owlbl"]
-size = Vector2(15, 30.25)
+size = Vector2(13, 28)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kkq63"]
 size = Vector2(22, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_drx43"]
-size = Vector2(44, 33)
+size = Vector2(33, 34.6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i1jvc"]
 size = Vector2(26, 35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sb5ij"]
-size = Vector2(12, 21)
+size = Vector2(11, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4rcq4"]
-size = Vector2(157, 60)
+size = Vector2(144, 61)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uimh0"]
-size = Vector2(55.5, 78)
+size = Vector2(49, 78)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_te4is"]
 a = Vector2(-1, 1)
@@ -91,22 +92,19 @@ b = Vector2(258, 208)
 
 [node name="Player" parent="." instance=ExtResource("1_ieijp")]
 z_index = -1
-position = Vector2(186, 134)
+position = Vector2(167, 100)
 speed = 50
 
 [node name="Background" type="Sprite2D" parent="."]
 show_behind_parent = true
 clip_children = 2
 z_index = -5
-position = Vector2(-4, -5)
-scale = Vector2(0.165, 0.2)
-texture = ExtResource("2_8r181")
+texture = ExtResource("2_i1xny")
 centered = false
 
 [node name="Library" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
 z_index = -2
-position = Vector2(139, 48)
-scale = Vector2(0.8, 0.8)
+position = Vector2(124, 35)
 text_lines = Array[String](["Так много книг. Каждый корешок целая история."])
 
 [node name="CollisionShape2D" parent="Library/Area2D" index="0"]
@@ -115,17 +113,15 @@ shape = SubResource("RectangleShape2D_2nwij")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Library/StaticBody2D" index="0"]
-position = Vector2(2, 6.875)
+position = Vector2(2.5, 2.875)
 shape = SubResource("RectangleShape2D_x2sm7")
 
 [node name="Sprite2D" type="Sprite2D" parent="Library"]
 position = Vector2(1.99997, -1.00002)
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_wk054")
 
 [node name="Table" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
-position = Vector2(47, 86)
-scale = Vector2(0.8, 0.8)
+position = Vector2(39, 77)
 text_lines = Array[String](["Стол из элитного красного дерева. Прослужил мне долгую службу, украшая кабинет.", "Он помогает мне сохранять дистанцию между мной и пациентом."])
 collision_size = Vector2(100, 200)
 
@@ -135,38 +131,40 @@ shape = SubResource("RectangleShape2D_umjh4")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Table/StaticBody2D" index="0"]
-position = Vector2(0.5, 11.5)
+position = Vector2(8.5, 7.5)
 shape = SubResource("RectangleShape2D_o0pta")
 
 [node name="Sprite2D" type="Sprite2D" parent="Table"]
 position = Vector2(1, 1)
-scale = Vector2(0.135, 0.2)
 texture = ExtResource("5_oyjbg")
 
 [node name="Door" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
 z_index = -2
-position = Vector2(187, 108)
-scale = Vector2(0.8, 0.8)
+position = Vector2(167, 80)
 text_lines = Array[String](["Я только пришел, мне незачем идти домой."])
+
+[node name="Area2D" parent="Door" index="0"]
+position = Vector2(0, -9.374999)
 
 [node name="CollisionShape2D" parent="Door/Area2D" index="0"]
 position = Vector2(3, 14.25)
 shape = SubResource("RectangleShape2D_6le0h")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
+[node name="StaticBody2D" parent="Door" index="1"]
+position = Vector2(0, -9.374999)
+
 [node name="CollisionShape2D" parent="Door/StaticBody2D" index="0"]
 position = Vector2(3, 8.125)
 shape = SubResource("RectangleShape2D_d1r0i")
 
 [node name="Sprite2D" type="Sprite2D" parent="Door"]
-position = Vector2(1.99997, -1.00002)
-scale = Vector2(0.2, 0.2)
+position = Vector2(2, -1.9)
 texture = ExtResource("6_eyf35")
 
 [node name="Trashbin" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
 z_index = -2
-position = Vector2(16, 103)
-scale = Vector2(0.8, 0.8)
+position = Vector2(84, 93)
 text_lines = Array[String](["Стоит вынести мусор после приёма."])
 
 [node name="CollisionShape2D" parent="Trashbin/Area2D" index="0"]
@@ -175,18 +173,16 @@ shape = SubResource("RectangleShape2D_l3i7f")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Trashbin/StaticBody2D" index="0"]
-position = Vector2(2.5, 0.5)
+position = Vector2(2, -0.5)
 shape = SubResource("RectangleShape2D_pphmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trashbin"]
 position = Vector2(1.99997, -1.00002)
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_t556q")
 
 [node name="Window" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
 z_index = -2
-position = Vector2(39, 41)
-scale = Vector2(0.8, 0.8)
+position = Vector2(34, 27)
 text_lines = Array[String](["Ничем не примечательный вид на пустую улицу."])
 
 [node name="CollisionShape2D" parent="Window/Area2D" index="0"]
@@ -200,17 +196,15 @@ shape = SubResource("RectangleShape2D_uowhg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Window"]
 position = Vector2(1.99997, -1.00002)
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_6ling")
 
 [node name="Certificates" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
 z_index = -2
-position = Vector2(89, 24)
-scale = Vector2(0.8, 0.8)
+position = Vector2(81, 8)
 text_lines = Array[String](["Мое социальное доказательство.", "Чтобы никто не задавался вопросом: “Почему я должен Вам доверять?”"])
 
 [node name="CollisionShape2D" parent="Certificates/Area2D" index="0"]
-position = Vector2(3.25, 29.5)
+position = Vector2(3.25, 23.5)
 shape = SubResource("RectangleShape2D_yjgfs")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
@@ -220,13 +214,10 @@ shape = SubResource("RectangleShape2D_d72y1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Certificates"]
 position = Vector2(3, 9)
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("9_rr7ft")
 
 [node name="Chair" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
-z_index = -2
-position = Vector2(34, 110)
-scale = Vector2(0.8, 0.8)
+position = Vector2(33, 93)
 text_lines = Array[String](["Так много книг. Каждый корешок целая история."])
 
 [node name="CollisionShape2D" parent="Chair/Area2D" index="0"]
@@ -235,18 +226,16 @@ shape = SubResource("RectangleShape2D_t4w50")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Chair/StaticBody2D" index="0"]
-position = Vector2(3.5, -1.125)
+position = Vector2(2.5, -1)
 shape = SubResource("RectangleShape2D_owlbl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair"]
 position = Vector2(1.99997, -1.00002)
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("10_60yx0")
 
 [node name="Closet" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
 z_index = -2
-position = Vector2(90, 58)
-scale = Vector2(0.8, 0.8)
+position = Vector2(81, 41.4)
 text_lines = Array[String](["Так много книг. Каждый корешок целая история."])
 
 [node name="CollisionShape2D" parent="Closet/Area2D" index="0"]
@@ -255,18 +244,16 @@ shape = SubResource("RectangleShape2D_kkq63")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Closet/StaticBody2D" index="0"]
-position = Vector2(2, -0.5)
+position = Vector2(2.5, 0.29999924)
 shape = SubResource("RectangleShape2D_drx43")
 
 [node name="Sprite2D" type="Sprite2D" parent="Closet"]
 position = Vector2(1.99997, -1.00002)
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("11_2h27k")
 
 [node name="Flower" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
-z_index = -3
-position = Vector2(164, 118)
-scale = Vector2(0.8, 0.8)
+z_index = -2
+position = Vector2(12, 42)
 text_lines = Array[String](["Фикус. Любимое домашнее растение моей матери.", "Никогда не любил фикусы"])
 
 [node name="CollisionShape2D" parent="Flower/Area2D" index="0"]
@@ -275,48 +262,51 @@ shape = SubResource("RectangleShape2D_i1jvc")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Flower/StaticBody2D" index="0"]
-position = Vector2(1, 9.5)
+position = Vector2(1.5, 11.5)
 shape = SubResource("RectangleShape2D_sb5ij")
 
 [node name="Sprite2D" type="Sprite2D" parent="Flower"]
 position = Vector2(1.99997, -1.00002)
-scale = Vector2(0.2, 0.2)
 texture = ExtResource("12_r88g7")
 
-[node name="flower" type="Sprite2D" parent="."]
-position = Vector2(80, 42)
-scale = Vector2(0.118182, 0.137449)
-texture = ExtResource("13_ppq43")
+[node name="switch" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(185, 75)
+texture = ExtResource("13_o1j7o")
+
+[node name="poster" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(151, 77)
+texture = ExtResource("14_bcta6")
 
 [node name="parket" type="Sprite2D" parent="."]
 z_index = -3
-position = Vector2(189, 136)
-scale = Vector2(0.163636, 0.177815)
+position = Vector2(169, 105)
 texture = ExtResource("14_ec10y")
 
 [node name="Walls" type="StaticBody2D" parent="."]
 
 [node name="Wall_up" type="CollisionShape2D" parent="Walls"]
-position = Vector2(80.5, 33)
+position = Vector2(72, 18.5)
 shape = SubResource("RectangleShape2D_4rcq4")
 
 [node name="Wall_door" type="CollisionShape2D" parent="Walls"]
-position = Vector2(187.25, 86)
+position = Vector2(168.5, 57)
 shape = SubResource("RectangleShape2D_uimh0")
 
 [node name="InvisibleWall" type="CollisionShape2D" parent="Walls"]
 shape = SubResource("SegmentShape2D_te4is")
 
 [node name="InvisibleWall2" type="CollisionShape2D" parent="Walls"]
-position = Vector2(-12, -36)
+position = Vector2(-15, -79)
 shape = SubResource("SegmentShape2D_om0he")
 
 [node name="InvisibleWall3" type="CollisionShape2D" parent="Walls"]
-position = Vector2(-44, -25)
+position = Vector2(-64, -79)
 shape = SubResource("SegmentShape2D_7lw1u")
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(186, 146)
+position = Vector2(169, 85)
 
 [editable path="Library"]
 [editable path="Table"]

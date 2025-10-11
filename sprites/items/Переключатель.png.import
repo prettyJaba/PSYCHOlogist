@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cek0q120hs6ky"
-path="res://.godot/imported/Окно.png-d73f6f1c36d59f0baa924b6ef1b442ef.ctex"
+uid="uid://m6bkicf8gu4s"
+path="res://.godot/imported/Переключатель.png-80a6d8455375add7b5807ed940cee965.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/items/Окно.png"
-dest_files=["res://.godot/imported/Окно.png-d73f6f1c36d59f0baa924b6ef1b442ef.ctex"]
+source_file="res://sprites/items/Переключатель.png"
+dest_files=["res://.godot/imported/Переключатель.png-80a6d8455375add7b5807ed940cee965.ctex"]
 
 [params]
 
