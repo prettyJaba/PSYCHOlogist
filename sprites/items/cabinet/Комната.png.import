@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmbprm43uin7r"
-path="res://.godot/imported/Тумба.png-81db17b21dffe354b8d6bafc21772fb2.ctex"
+uid="uid://c2iucd0l4myuw"
+path="res://.godot/imported/Комната.png-a3e6d906862737cb56e76bb17f5094ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/items/Тумба.png"
-dest_files=["res://.godot/imported/Тумба.png-81db17b21dffe354b8d6bafc21772fb2.ctex"]
+source_file="res://sprites/items/cabinet/Комната.png"
+dest_files=["res://.godot/imported/Комната.png-a3e6d906862737cb56e76bb17f5094ec.ctex"]
 
 [params]
 

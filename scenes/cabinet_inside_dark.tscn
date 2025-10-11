@@ -1,20 +1,20 @@
-[gd_scene load_steps=39 format=3 uid="uid://cgsfxh4tpnqt4"]
+[gd_scene load_steps=39 format=3 uid="uid://djdnypqjyuv3w"]
 
-[ext_resource type="PackedScene" uid="uid://cud641jyjb6sm" path="res://scenes/mechanics/player.tscn" id="1_ieijp"]
-[ext_resource type="Texture2D" uid="uid://c2iucd0l4myuw" path="res://sprites/items/cabinet/Комната.png" id="2_i1xny"]
-[ext_resource type="PackedScene" uid="uid://cya508uj8ajgm" path="res://scenes/mechanics/interactable_object.tscn" id="3_0jqlk"]
-[ext_resource type="Texture2D" uid="uid://c7oxrw8eh00rj" path="res://sprites/items/cabinet/КнижныйШкаф.png" id="4_wk054"]
-[ext_resource type="Texture2D" uid="uid://dpjt348cimcd5" path="res://sprites/items/cabinet/Рабочееместо.png" id="5_oyjbg"]
-[ext_resource type="Texture2D" uid="uid://c7apo0wxdl01x" path="res://sprites/items/cabinet/Дверь.png" id="6_eyf35"]
-[ext_resource type="Texture2D" uid="uid://dbtaxak7mmueh" path="res://sprites/items/cabinet/Мусорка.png" id="7_t556q"]
-[ext_resource type="Texture2D" uid="uid://cek0q120hs6ky" path="res://sprites/items/cabinet/Окно.png" id="8_6ling"]
-[ext_resource type="Texture2D" uid="uid://bohwap4eou78q" path="res://sprites/items/cabinet/Сертификаты.png" id="9_rr7ft"]
-[ext_resource type="Texture2D" uid="uid://d2eal71amtgb3" path="res://sprites/items/cabinet/Стул.png" id="10_60yx0"]
-[ext_resource type="Texture2D" uid="uid://bmbprm43uin7r" path="res://sprites/items/cabinet/Тумба.png" id="11_2h27k"]
-[ext_resource type="Texture2D" uid="uid://7rjcjsel5h41" path="res://sprites/items/cabinet/ЦветокНапольный.png" id="12_r88g7"]
-[ext_resource type="Texture2D" uid="uid://m6bkicf8gu4s" path="res://sprites/items/cabinet/Переключатель.png" id="13_o1j7o"]
-[ext_resource type="Texture2D" uid="uid://c5c4yracv5ae8" path="res://sprites/items/cabinet/КартинкаУдвери.png" id="14_bcta6"]
-[ext_resource type="Texture2D" uid="uid://1m3iwmawr35n" path="res://sprites/items/cabinet/Ковер.png" id="14_ec10y"]
+[ext_resource type="PackedScene" uid="uid://cud641jyjb6sm" path="res://scenes/mechanics/player.tscn" id="1_x86ac"]
+[ext_resource type="Texture2D" uid="uid://vvy8tjym7gpe" path="res://sprites/items/cabinet_dark/Комната.png" id="2_x86ac"]
+[ext_resource type="PackedScene" uid="uid://cya508uj8ajgm" path="res://scenes/mechanics/interactable_object.tscn" id="3_o1kek"]
+[ext_resource type="Texture2D" uid="uid://sxqliatjay7i" path="res://sprites/items/cabinet_dark/КнижныйШкаф.png" id="4_yb36b"]
+[ext_resource type="Texture2D" uid="uid://80basfyrjbdl" path="res://sprites/items/cabinet_dark/Рабочееместо.png" id="5_o1kek"]
+[ext_resource type="Texture2D" uid="uid://cd46ntibvv012" path="res://sprites/items/cabinet_dark/Дверь.png" id="6_io12k"]
+[ext_resource type="Texture2D" uid="uid://uvqdg1iuqx3l" path="res://sprites/items/cabinet_dark/Мусорка.png" id="7_3pnw3"]
+[ext_resource type="Texture2D" uid="uid://bm74hihmauukb" path="res://sprites/items/cabinet_dark/Окно(закрыто).png" id="8_00jra"]
+[ext_resource type="Texture2D" uid="uid://bluap0xcgwclr" path="res://sprites/items/cabinet_dark/Сертификаты.png" id="9_utok0"]
+[ext_resource type="Texture2D" uid="uid://dy31bw2tt41xd" path="res://sprites/items/cabinet_dark/Стул.png" id="10_4y1s0"]
+[ext_resource type="Texture2D" uid="uid://brmt4lrdst444" path="res://sprites/items/cabinet_dark/Тумба.png" id="11_6lbmv"]
+[ext_resource type="Texture2D" uid="uid://bahepn2n6limg" path="res://sprites/items/cabinet_dark/ЦветокНапольный.png" id="12_xr04a"]
+[ext_resource type="Texture2D" uid="uid://r5ghql4gtjsl" path="res://sprites/items/cabinet_dark/Переключатель.png" id="13_u1n4k"]
+[ext_resource type="Texture2D" uid="uid://bl0ppuphm82c" path="res://sprites/items/cabinet_dark/Картинкаудвери.png" id="14_sp3y2"]
+[ext_resource type="Texture2D" uid="uid://jbxicyqjk1gq" path="res://sprites/items/cabinet_dark/Ковер.png" id="15_21ytj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2nwij"]
 size = Vector2(47, 44)
@@ -90,7 +90,7 @@ b = Vector2(258, 208)
 
 [node name="cabinet_inside" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_ieijp")]
+[node name="Player" parent="." instance=ExtResource("1_x86ac")]
 z_index = -1
 position = Vector2(167, 100)
 speed = 50
@@ -99,13 +99,13 @@ speed = 50
 show_behind_parent = true
 clip_children = 2
 z_index = -5
-texture = ExtResource("2_i1xny")
+texture = ExtResource("2_x86ac")
 centered = false
 
-[node name="Library" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
+[node name="Library" parent="." groups=["interactable"] instance=ExtResource("3_o1kek")]
 z_index = -2
 position = Vector2(124, 35)
-text_lines = Array[String](["Так много книг. Каждый корешок целая история."])
+text_lines = Array[String](["Слишком темно, нужно открыть шторы, чтобы осмотреться."])
 
 [node name="CollisionShape2D" parent="Library/Area2D" index="0"]
 position = Vector2(1.5, 15)
@@ -118,11 +118,11 @@ shape = SubResource("RectangleShape2D_x2sm7")
 
 [node name="Sprite2D" type="Sprite2D" parent="Library"]
 position = Vector2(1.99997, -1.00002)
-texture = ExtResource("4_wk054")
+texture = ExtResource("4_yb36b")
 
-[node name="Table" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
+[node name="Table" parent="." groups=["interactable"] instance=ExtResource("3_o1kek")]
 position = Vector2(39, 77)
-text_lines = Array[String](["Стол из элитного красного дерева. Прослужил мне долгую службу, украшая кабинет.", "Он помогает мне сохранять дистанцию между мной и пациентом."])
+text_lines = Array[String](["Слишком темно, нужно открыть шторы, чтобы осмотреться."])
 collision_size = Vector2(100, 200)
 
 [node name="CollisionShape2D" parent="Table/Area2D" index="0"]
@@ -136,12 +136,12 @@ shape = SubResource("RectangleShape2D_o0pta")
 
 [node name="Sprite2D" type="Sprite2D" parent="Table"]
 position = Vector2(1, 1)
-texture = ExtResource("5_oyjbg")
+texture = ExtResource("5_o1kek")
 
-[node name="Door" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
+[node name="Door" parent="." groups=["interactable"] instance=ExtResource("3_o1kek")]
 z_index = -2
-position = Vector2(167, 80)
-text_lines = Array[String](["Я только пришел, мне незачем идти домой."])
+position = Vector2(167, 79)
+text_lines = Array[String](["Слишком темно, нужно открыть шторы, чтобы осмотреться."])
 
 [node name="Area2D" parent="Door" index="0"]
 position = Vector2(0, -9.374999)
@@ -160,12 +160,12 @@ shape = SubResource("RectangleShape2D_d1r0i")
 
 [node name="Sprite2D" type="Sprite2D" parent="Door"]
 position = Vector2(2, -1.9)
-texture = ExtResource("6_eyf35")
+texture = ExtResource("6_io12k")
 
-[node name="Trashbin" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
+[node name="Trashbin" parent="." groups=["interactable"] instance=ExtResource("3_o1kek")]
 z_index = -2
 position = Vector2(84, 93)
-text_lines = Array[String](["Стоит вынести мусор после приёма."])
+text_lines = Array[String](["Слишком темно, нужно открыть шторы, чтобы осмотреться."])
 
 [node name="CollisionShape2D" parent="Trashbin/Area2D" index="0"]
 position = Vector2(-3, 0)
@@ -178,9 +178,9 @@ shape = SubResource("RectangleShape2D_pphmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trashbin"]
 position = Vector2(1.99997, -1.00002)
-texture = ExtResource("7_t556q")
+texture = ExtResource("7_3pnw3")
 
-[node name="Window" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
+[node name="Window" parent="." groups=["interactable"] instance=ExtResource("3_o1kek")]
 z_index = -2
 position = Vector2(34, 27)
 text_lines = Array[String](["Ничем не примечательный вид на пустую улицу."])
@@ -196,12 +196,12 @@ shape = SubResource("RectangleShape2D_uowhg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Window"]
 position = Vector2(1.99997, -1.00002)
-texture = ExtResource("8_6ling")
+texture = ExtResource("8_00jra")
 
-[node name="Certificates" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
+[node name="Certificates" parent="." groups=["interactable"] instance=ExtResource("3_o1kek")]
 z_index = -2
 position = Vector2(81, 8)
-text_lines = Array[String](["Мое социальное доказательство.", "Чтобы никто не задавался вопросом: “Почему я должен Вам доверять?”"])
+text_lines = Array[String](["Слишком темно, нужно открыть шторы, чтобы осмотреться."])
 
 [node name="CollisionShape2D" parent="Certificates/Area2D" index="0"]
 position = Vector2(3.25, 23.5)
@@ -214,11 +214,11 @@ shape = SubResource("RectangleShape2D_d72y1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Certificates"]
 position = Vector2(3, 9)
-texture = ExtResource("9_rr7ft")
+texture = ExtResource("9_utok0")
 
-[node name="Chair" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
+[node name="Chair" parent="." groups=["interactable"] instance=ExtResource("3_o1kek")]
 position = Vector2(33, 93)
-text_lines = Array[String](["Так много книг. Каждый корешок целая история."])
+text_lines = Array[String](["Слишком темно, нужно открыть шторы, чтобы осмотреться."])
 
 [node name="CollisionShape2D" parent="Chair/Area2D" index="0"]
 position = Vector2(-87, -75)
@@ -231,12 +231,12 @@ shape = SubResource("RectangleShape2D_owlbl")
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair"]
 position = Vector2(1.99997, -1.00002)
-texture = ExtResource("10_60yx0")
+texture = ExtResource("10_4y1s0")
 
-[node name="Closet" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
+[node name="Closet" parent="." groups=["interactable"] instance=ExtResource("3_o1kek")]
 z_index = -2
 position = Vector2(81, 41.4)
-text_lines = Array[String](["Так много книг. Каждый корешок целая история."])
+text_lines = Array[String](["Слишком темно, нужно открыть шторы, чтобы осмотреться."])
 
 [node name="CollisionShape2D" parent="Closet/Area2D" index="0"]
 position = Vector2(-158, -26)
@@ -249,12 +249,12 @@ shape = SubResource("RectangleShape2D_drx43")
 
 [node name="Sprite2D" type="Sprite2D" parent="Closet"]
 position = Vector2(1.99997, -1.00002)
-texture = ExtResource("11_2h27k")
+texture = ExtResource("11_6lbmv")
 
-[node name="Flower" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
+[node name="Flower" parent="." groups=["interactable"] instance=ExtResource("3_o1kek")]
 z_index = -2
 position = Vector2(12, 42)
-text_lines = Array[String](["Фикус. Любимое домашнее растение моей матери.", "Никогда не любил фикусы"])
+text_lines = Array[String](["Слишком темно, нужно открыть шторы, чтобы осмотреться."])
 
 [node name="CollisionShape2D" parent="Flower/Area2D" index="0"]
 position = Vector2(-2, 10.5)
@@ -267,22 +267,22 @@ shape = SubResource("RectangleShape2D_sb5ij")
 
 [node name="Sprite2D" type="Sprite2D" parent="Flower"]
 position = Vector2(1.99997, -1.00002)
-texture = ExtResource("12_r88g7")
+texture = ExtResource("12_xr04a")
 
 [node name="switch" type="Sprite2D" parent="."]
 z_index = -2
 position = Vector2(185, 75)
-texture = ExtResource("13_o1j7o")
+texture = ExtResource("13_u1n4k")
 
 [node name="poster" type="Sprite2D" parent="."]
 z_index = -2
 position = Vector2(151, 77)
-texture = ExtResource("14_bcta6")
+texture = ExtResource("14_sp3y2")
 
 [node name="parket" type="Sprite2D" parent="."]
 z_index = -3
 position = Vector2(169, 105)
-texture = ExtResource("14_ec10y")
+texture = ExtResource("15_21ytj")
 
 [node name="Walls" type="StaticBody2D" parent="."]
 

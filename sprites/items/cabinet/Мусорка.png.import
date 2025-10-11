@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2iucd0l4myuw"
-path="res://.godot/imported/Комната.png-17b3964a2775603e747e53c442228695.ctex"
+uid="uid://dbtaxak7mmueh"
+path="res://.godot/imported/Мусорка.png-b34ab8b6fa70fb2bc6f5396a323551c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/items/Комната.png"
-dest_files=["res://.godot/imported/Комната.png-17b3964a2775603e747e53c442228695.ctex"]
+source_file="res://sprites/items/cabinet/Мусорка.png"
+dest_files=["res://.godot/imported/Мусорка.png-b34ab8b6fa70fb2bc6f5396a323551c3.ctex"]
 
 [params]
 

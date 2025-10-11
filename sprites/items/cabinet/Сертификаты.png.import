@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbtaxak7mmueh"
-path="res://.godot/imported/Мусорка.png-c809e049862295e72932879a2b06c129.ctex"
+uid="uid://bohwap4eou78q"
+path="res://.godot/imported/Сертификаты.png-b9c748a6d9c38d84963abf5b1fbed20b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/items/Мусорка.png"
-dest_files=["res://.godot/imported/Мусорка.png-c809e049862295e72932879a2b06c129.ctex"]
+source_file="res://sprites/items/cabinet/Сертификаты.png"
+dest_files=["res://.godot/imported/Сертификаты.png-b9c748a6d9c38d84963abf5b1fbed20b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7oxrw8eh00rj"
-path="res://.godot/imported/КнижныйШкаф.png-f460f2ab1e04e428b54fff6579596d66.ctex"
+uid="uid://cek0q120hs6ky"
+path="res://.godot/imported/Окно.png-850df3ef691ab633cd66bbc61617ea74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/items/КнижныйШкаф.png"
-dest_files=["res://.godot/imported/КнижныйШкаф.png-f460f2ab1e04e428b54fff6579596d66.ctex"]
+source_file="res://sprites/items/cabinet/Окно.png"
+dest_files=["res://.godot/imported/Окно.png-850df3ef691ab633cd66bbc61617ea74.ctex"]
 
 [params]
 

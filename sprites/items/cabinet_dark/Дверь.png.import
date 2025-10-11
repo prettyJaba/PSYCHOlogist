@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7rjcjsel5h41"
-path="res://.godot/imported/ЦветокНапольный.png-1ee12b1c36d01dff87d200bcdee071e0.ctex"
+uid="uid://cd46ntibvv012"
+path="res://.godot/imported/Дверь.png-349831d2d333f7246ffd4920ac22fe20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/items/ЦветокНапольный.png"
-dest_files=["res://.godot/imported/ЦветокНапольный.png-1ee12b1c36d01dff87d200bcdee071e0.ctex"]
+source_file="res://sprites/items/cabinet_dark/Дверь.png"
+dest_files=["res://.godot/imported/Дверь.png-349831d2d333f7246ffd4920ac22fe20.ctex"]
 
 [params]
 

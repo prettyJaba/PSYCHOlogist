@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7apo0wxdl01x"
-path="res://.godot/imported/Дверь.png-aee94e70eee149dc91fd5fe3f79a1f13.ctex"
+uid="uid://c5c4yracv5ae8"
+path="res://.godot/imported/КартинкаУдвери.png-a11f1b5b32afbe3e457278698bcaf8cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/items/Дверь.png"
-dest_files=["res://.godot/imported/Дверь.png-aee94e70eee149dc91fd5fe3f79a1f13.ctex"]
+source_file="res://sprites/items/cabinet/КартинкаУдвери.png"
+dest_files=["res://.godot/imported/КартинкаУдвери.png-a11f1b5b32afbe3e457278698bcaf8cc.ctex"]
 
 [params]
 

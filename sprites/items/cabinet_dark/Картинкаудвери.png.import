@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m6bkicf8gu4s"
-path="res://.godot/imported/Переключатель.png-80a6d8455375add7b5807ed940cee965.ctex"
+uid="uid://bl0ppuphm82c"
+path="res://.godot/imported/Картинкаудвери.png-368978cd95ef187db7ba867fc62bf007.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/items/Переключатель.png"
-dest_files=["res://.godot/imported/Переключатель.png-80a6d8455375add7b5807ed940cee965.ctex"]
+source_file="res://sprites/items/cabinet_dark/Картинкаудвери.png"
+dest_files=["res://.godot/imported/Картинкаудвери.png-368978cd95ef187db7ba867fc62bf007.ctex"]
 
 [params]
 

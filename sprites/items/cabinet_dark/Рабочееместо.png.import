@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1m3iwmawr35n"
-path="res://.godot/imported/Ковер.png-1bb7db991b701c5bf43646f8521b040f.ctex"
+uid="uid://80basfyrjbdl"
+path="res://.godot/imported/Рабочееместо.png-08a364bd3763810b289e265227ca11f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/items/Ковер.png"
-dest_files=["res://.godot/imported/Ковер.png-1bb7db991b701c5bf43646f8521b040f.ctex"]
+source_file="res://sprites/items/cabinet_dark/Рабочееместо.png"
+dest_files=["res://.godot/imported/Рабочееместо.png-08a364bd3763810b289e265227ca11f9.ctex"]
 
 [params]
 

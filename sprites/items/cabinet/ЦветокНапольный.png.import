@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpjt348cimcd5"
-path="res://.godot/imported/Рабочееместо.png-45e834a0e0f2c3adb993a30b78f86904.ctex"
+uid="uid://7rjcjsel5h41"
+path="res://.godot/imported/ЦветокНапольный.png-62f1563497af0f9bb72a0347bf73d1da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/items/Рабочееместо.png"
-dest_files=["res://.godot/imported/Рабочееместо.png-45e834a0e0f2c3adb993a30b78f86904.ctex"]
+source_file="res://sprites/items/cabinet/ЦветокНапольный.png"
+dest_files=["res://.godot/imported/ЦветокНапольный.png-62f1563497af0f9bb72a0347bf73d1da.ctex"]
 
 [params]
 
