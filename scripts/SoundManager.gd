@@ -81,6 +81,7 @@ func init_tracks():
 	register_sfx("clock", "res://sounds/sfx/clock-tick.mp3")
 	register_sfx("street", "res://sounds/sfx/a79e810c8566eee.mp3")
 	register_sfx("step", "res://sounds/sfx/slow-careful-step.mp3")
+	register_sfx("curtains", "res://sounds/sfx/curtains.mp3")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:

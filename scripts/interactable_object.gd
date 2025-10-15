@@ -42,11 +42,12 @@ func on_interacted() -> void:
 		#показать темный экран
 		var dark_screen := get_tree().current_scene.get_node("CanvasLayer/DarkScreen")
 		dark_screen.visible = true
+		SoundManager.play_sfx("curtains")
 		
-		#через 2 секунды убрать экран и включить свет
+		#через 3 секунды убрать экран и включить свет
 		var timer := Timer.new()
 		timer.one_shot = true
-		timer.wait_time = 2.0
+		timer.wait_time = 3.0
 		timer.timeout.connect(func() -> void:
 			dark_screen.visible = false
 			WorldStateManager.set_light_state(true)
