@@ -18,8 +18,10 @@ var player_node: Node = null
 
 # --- Подключение объектов ---
 func connect_object(obj: Node) -> void:
-	obj.connect("player_entered", Callable(self, "_on_interactable_entered"))
-	obj.connect("player_exited", Callable(self, "_on_interactable_exited"))
+	if not obj.is_connected("player_entered", Callable(self, "_on_interactable_entered")):
+		obj.connect("player_entered", Callable(self, "_on_interactable_entered"))
+	if not obj.is_connected("player_exited", Callable(self, "_on_interactable_exited")):
+		obj.connect("player_exited", Callable(self, "_on_interactable_exited"))
 
 func _on_interactable_entered(obj: Node) -> void:
 	current_interactable = obj
