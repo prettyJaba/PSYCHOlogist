@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 SoundManager="*res://scenes/main/sound_manager.tscn"
 Dialogues="*res://scripts/DialogueManager.gd"
 UiManager="*res://scenes/main/ui.tscn"
+WorldStateManager="*res://scripts/WolrdState.gd"
 
 [display]
 

@@ -5,23 +5,56 @@ class_name InteractableObject
 signal player_entered(obj)
 signal player_exited(obj)
 
-@export var text_lines: Array[String] = [
-	"Это старая картина...",
-	"Она кажется знакомой...",
-	"Но ты не можешь вспомнить, где её видел."
-]
+@export var text_lines_dark: Array[String] = []
+@export var text_lines_light: Array[String] = []
+
+@export var light_texture: Texture2D
+@export var dark_texture: Texture2D
+
+# Флаги поведения
+@export var toggles_light_on_interact: bool = false
+@export var one_time_only: bool = true  # можно ли повторно переключать
+var has_triggered := false
+
+@onready var sprite := $Sprite2D
+var is_light_on := false
+
 @export var collision_size: Vector2 = Vector2(64, 64)
 
 func _ready() -> void:
-	var shape = $Area2D/CollisionShape2D.shape
-	if shape is RectangleShape2D:
-		shape.extents = collision_size / 2
+	WorldStateManager.connect("lighting_changed", _on_lighting_changed)
+	_on_lighting_changed(WorldStateManager.is_light_on())
 
-	# опционально: если DialogueManager (autoload) доступен как "Dialogues", зарегистрируемся автоматически
-	if Engine.has_singleton("Dialogues"):
-		Dialogues.connect_object(self)
+	Dialogues.connect_object(self)
 
-# Объявляем события входа/выхода — без обработки Input!
+func _on_lighting_changed(value: bool) -> void:
+	is_light_on = value
+	if sprite:
+		sprite.texture = light_texture if value else dark_texture
+
+func get_current_text_lines() -> Array[String]:
+	return text_lines_light if is_light_on else text_lines_dark
+	
+func on_interacted() -> void:
+	if toggles_light_on_interact and (not one_time_only or not has_triggered):
+		has_triggered = true
+		
+		#показать темный экран
+		var dark_screen := get_tree().current_scene.get_node("CanvasLayer/DarkScreen")
+		dark_screen.visible = true
+		
+		#через 2 секунды убрать экран и включить свет
+		var timer := Timer.new()
+		timer.one_shot = true
+		timer.wait_time = 2.0
+		timer.timeout.connect(func() -> void:
+			dark_screen.visible = false
+			WorldStateManager.set_light_state(true)
+		)
+		add_child(timer)
+		timer.start()
+
+
 func _on_area_2d_body_entered(body) -> void:
 	if body.is_in_group("player"):
 		emit_signal("player_entered", self)

@@ -87,7 +87,9 @@ func _process(_delta: float) -> void:
 	# 1) Если нет активного диалога — менеджер сам слушает нажатие и запускает диалог
 	if not dialog_active:
 		if current_interactable and Input.is_action_just_pressed("interact"):
-			_start_dialog(current_interactable.text_lines)
+			if current_interactable.has_method("on_interacted"):
+				current_interactable.on_interacted()
+			_start_dialog(current_interactable.get_current_text_lines())
 		return
 
 	# 2) Если диалог активен — обрабатываем пропуск / переход

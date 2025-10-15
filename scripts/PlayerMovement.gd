@@ -2,17 +2,26 @@ extends CharacterBody2D
 
 @export var speed := 100
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var step_timer: Timer = $StepTimer  # добавим этот таймер в сцену Player
+@onready var step_timer: Timer = $StepTimer
+
+@export var light_frames: SpriteFrames
+@export var dark_frames: SpriteFrames
 
 var can_move := true
 var last_direction := "down"
 var moving := false
+var light_mode := false
 
 func _ready() -> void:
+	WorldStateManager.connect("lighting_changed", Callable(self, "_on_lighting_changed"))
+	_on_lighting_changed(WorldStateManager.is_light_on())
+	
 	step_timer.wait_time = 0.5
 	step_timer.one_shot = false
 	step_timer.autostart = false
 	step_timer.timeout.connect(_on_step_timer_timeout)
+	
+	animated_sprite.sprite_frames = dark_frames
 
 func _process(delta: float) -> void:
 	if not can_move:
@@ -58,6 +67,15 @@ func start(pos):
 	show() 
 	$CollisionShape2D.disabled = false
 
+func switch_to_light_mode(enabled: bool) -> void:
+	light_mode = enabled
+	if enabled:
+		animated_sprite.sprite_frames = light_frames
+	else:
+		animated_sprite.sprite_frames = dark_frames
+
+	play_idle_animation()
+
 func update_animation(direction: Vector2) -> void:
 	if abs(direction.x) > abs(direction.y):
 		last_direction = "right" if direction.x > 0 else "left"
@@ -77,4 +95,7 @@ func block_movement(block: bool):
 	can_move = not block
 
 func _on_step_timer_timeout() -> void:
-	SoundManager.play_sfx("step")  # звук теперь ровно один раз за “шаг”
+	SoundManager.play_sfx("step")
+
+func _on_lighting_changed(is_on: bool) -> void:
+	switch_to_light_mode(is_on)
