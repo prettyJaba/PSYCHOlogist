@@ -51,7 +51,7 @@ size = Vector2(26, 31.75)
 size = Vector2(14, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pphmq"]
-size = Vector2(10, 15)
+size = Vector2(11, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbl87"]
 size = Vector2(43, 13)
@@ -102,6 +102,7 @@ a = Vector2(258, 149)
 b = Vector2(258, 208)
 
 [node name="cabinet_inside" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Switch" parent="." instance=ExtResource("3_0jqlk")]
 position = Vector2(-202, 19)
@@ -147,12 +148,10 @@ texture = ExtResource("2_i1xny")
 centered = false
 
 [node name="Player" parent="." instance=ExtResource("1_ieijp")]
-z_index = -1
-position = Vector2(167, 100)
+position = Vector2(170, 93)
 speed = 50
 
 [node name="Library" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
-z_index = -2
 position = Vector2(124, 35)
 text_lines_dark = Array[String](["Слишком темно, я не смогу так работать. Надо открыть шторы."])
 text_lines_light = Array[String](["Так много книг. Каждый корешок целая история."])
@@ -194,7 +193,6 @@ position = Vector2(1, 1)
 texture = ExtResource("5_oyjbg")
 
 [node name="Door" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
-z_index = -2
 position = Vector2(167, 80)
 text_lines_dark = Array[String](["Слишком темно, я не смогу так работать. Надо открыть шторы."])
 text_lines_light = Array[String](["Я только пришел, мне нет смысла выходить."])
@@ -221,7 +219,6 @@ position = Vector2(2, -1.9)
 texture = ExtResource("6_eyf35")
 
 [node name="Trashbin" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
-z_index = -2
 position = Vector2(84, 93)
 text_lines_dark = Array[String](["Слишком темно, я не смогу так работать. Надо открыть шторы."])
 text_lines_light = Array[String](["Не люблю когда мусора скапливается слишком много."])
@@ -229,20 +226,21 @@ light_texture = ExtResource("7_t556q")
 dark_texture = ExtResource("11_r2xk1")
 
 [node name="CollisionShape2D" parent="Trashbin/Area2D" index="0"]
-position = Vector2(2, -0.5)
+position = Vector2(2, -1)
 shape = SubResource("RectangleShape2D_l3i7f")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Trashbin/StaticBody2D" index="0"]
-position = Vector2(2, -0.5)
+position = Vector2(1.5, -2)
 shape = SubResource("RectangleShape2D_pphmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trashbin"]
-position = Vector2(1.99997, -1.00002)
+position = Vector2(2.0000005, -1.9999971)
 texture = ExtResource("7_t556q")
+centered = false
+offset = Vector2(-6, -8)
 
 [node name="Window" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
-z_index = -2
 position = Vector2(34, 27)
 text_lines_light = Array[String](["Ничем не примечательный вид на пустую улицу."])
 light_texture = ExtResource("8_6ling")
@@ -263,7 +261,6 @@ position = Vector2(1.99997, -1.00002)
 texture = ExtResource("8_6ling")
 
 [node name="Certificates" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
-z_index = -2
 position = Vector2(81, 8)
 text_lines_dark = Array[String](["Слишком темно, я не смогу так работать. Надо открыть шторы."])
 text_lines_light = Array[String](["Мое социальное доказательство.", "Чтобы никто не задавался вопросом: “Почему я должен Вам доверять?”"])
@@ -303,7 +300,6 @@ position = Vector2(1.99997, -1.00002)
 texture = ExtResource("10_60yx0")
 
 [node name="Closet" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
-z_index = -2
 position = Vector2(81, 41.4)
 text_lines_dark = Array[String](["Слишком темно, я не смогу так работать. Надо открыть шторы."])
 light_texture = ExtResource("11_2h27k")
@@ -323,7 +319,6 @@ position = Vector2(1.99997, -1.00002)
 texture = ExtResource("11_2h27k")
 
 [node name="Flower" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
-z_index = -2
 position = Vector2(12, 42)
 text_lines_dark = Array[String](["Слишком темно, я не смогу так работать. Надо открыть шторы."])
 text_lines_light = Array[String](["Фикус. Любимое домашнее растение моей матери.", "Никогда не любил фикусы."])
