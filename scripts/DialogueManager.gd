@@ -13,7 +13,8 @@ var text_lines: Array[String] = []
 var current_text_index := 0
 var skip_requested := false
 
-var current_interactable = null
+# ЗАМЕНА: вместо одного объекта используем стек
+var interactables_stack: Array[Node] = []
 var player_node: Node = null
 
 # --- Подключение объектов ---
@@ -24,11 +25,16 @@ func connect_object(obj: Node) -> void:
 		obj.connect("player_exited", Callable(self, "_on_interactable_exited"))
 
 func _on_interactable_entered(obj: Node) -> void:
-	current_interactable = obj
+	# Убираем объект если он уже есть в стеке (на случай дублирования сигналов)
+	if obj in interactables_stack:
+		interactables_stack.erase(obj)
+	# Добавляем объект в конец стека (последний вошедший будет доступен для взаимодействия)
+	interactables_stack.append(obj)
 
 func _on_interactable_exited(obj: Node) -> void:
-	if current_interactable == obj:
-		current_interactable = null
+	# Удаляем объект из стека при выходе из зоны
+	if obj in interactables_stack:
+		interactables_stack.erase(obj)
 
 # --- Инициализация UI ---
 func _init_ui() -> void:
@@ -87,6 +93,9 @@ func _type_text(full_text: String) -> void:
 	waiting_for_next = true
 
 func _process(_delta: float) -> void:
+	# Получаем текущий активный объект (последний в стеке)
+	var current_interactable = interactables_stack.back() if not interactables_stack.is_empty() else null
+	
 	# 1) Если нет активного диалога — менеджер сам слушает нажатие и запускает диалог
 	if not dialog_active:
 		if current_interactable and Input.is_action_just_pressed("interact"):

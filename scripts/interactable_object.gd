@@ -64,6 +64,11 @@ func on_interacted() -> void:
 	if toggles_light_on_interact and (not one_time_only or not has_triggered):
 		has_triggered = true
 		
+		# Блокируем движение игрока
+		var player_node = get_tree().get_nodes_in_group("player")[0] if get_tree().has_group("player") else null
+		if player_node and player_node.has_method("block_movement"):
+			player_node.block_movement(true)
+		
 		#показать темный экран
 		var dark_screen := get_tree().current_scene.get_node("CanvasLayer/DarkScreen")
 		dark_screen.visible = true
@@ -76,6 +81,10 @@ func on_interacted() -> void:
 		timer.timeout.connect(func() -> void:
 			dark_screen.visible = false
 			WorldStateManager.set_light_state(true)
+			
+			# Разблокируем движение игрока
+			if player_node and player_node.has_method("block_movement"):
+				player_node.block_movement(false)
 		)
 		add_child(timer)
 		timer.start()

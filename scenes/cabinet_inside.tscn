@@ -39,7 +39,7 @@ size = Vector2(35, 42.25)
 size = Vector2(61, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o0pta"]
-size = Vector2(57, 29)
+size = Vector2(60, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6le0h"]
 size = Vector2(28, 33.5)
@@ -48,10 +48,10 @@ size = Vector2(28, 33.5)
 size = Vector2(26, 31.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l3i7f"]
-size = Vector2(14, 19)
+size = Vector2(14, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pphmq"]
-size = Vector2(11, 16)
+size = Vector2(12, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbl87"]
 size = Vector2(43, 13)
@@ -148,7 +148,7 @@ texture = ExtResource("2_i1xny")
 centered = false
 
 [node name="Player" parent="." instance=ExtResource("1_ieijp")]
-position = Vector2(170, 93)
+position = Vector2(169, 92)
 speed = 50
 
 [node name="Library" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
@@ -185,7 +185,7 @@ shape = SubResource("RectangleShape2D_umjh4")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Table/StaticBody2D" index="0"]
-position = Vector2(8.5, 7.5)
+position = Vector2(10, 11.5)
 shape = SubResource("RectangleShape2D_o0pta")
 
 [node name="Sprite2D" type="Sprite2D" parent="Table"]
@@ -226,12 +226,12 @@ light_texture = ExtResource("7_t556q")
 dark_texture = ExtResource("11_r2xk1")
 
 [node name="CollisionShape2D" parent="Trashbin/Area2D" index="0"]
-position = Vector2(2, -1)
+position = Vector2(3, -0.5)
 shape = SubResource("RectangleShape2D_l3i7f")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Trashbin/StaticBody2D" index="0"]
-position = Vector2(1.5, -2)
+position = Vector2(2, 0.5)
 shape = SubResource("RectangleShape2D_pphmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="Trashbin"]
@@ -306,7 +306,7 @@ light_texture = ExtResource("11_2h27k")
 dark_texture = ExtResource("19_277wn")
 
 [node name="CollisionShape2D" parent="Closet/Area2D" index="0"]
-position = Vector2(-158, -26)
+position = Vector2(-135, -23.400002)
 shape = SubResource("RectangleShape2D_kkq63")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
