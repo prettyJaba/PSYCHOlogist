@@ -36,10 +36,11 @@ func _init_ui() -> void:
 		panel = get_tree().current_scene.get_node("UI/CanvasLayer/Panel")
 		label = panel.get_node("RichTextLabel")
 
-# Запуск диалога (вызывается внутри _process при нажатии)
+# Запуск диалога (теперь запускает только одну реплику)
 func _start_dialog(lines: Array[String]) -> void:
-	if dialog_active:
+	if dialog_active or lines.is_empty():
 		return
+	
 	dialog_active = true
 	text_lines = lines.duplicate()
 	current_text_index = 0
@@ -48,7 +49,7 @@ func _start_dialog(lines: Array[String]) -> void:
 	if player_node:
 		player_node.block_movement(true)
 
-	# стартуем первую строку
+	# стартуем единственную строку
 	_start_next_line()
 
 func _start_next_line() -> void:
@@ -64,7 +65,7 @@ func _start_next_line() -> void:
 	is_typing = true
 	waiting_for_next = false
 
-	# запускаем асинхронную печать (вызов без await — работает как корутина в GDScript)
+	# запускаем асинхронную печать
 	_type_text(full_text)
 
 # Асинхронная печать
@@ -82,7 +83,7 @@ func _type_text(full_text: String) -> void:
 		label.text = full_text
 
 	is_typing = false
-	current_text_index += 1  # индекс увеличиваем только после окончания печати
+	current_text_index += 1
 	waiting_for_next = true
 
 func _process(_delta: float) -> void:
@@ -91,21 +92,27 @@ func _process(_delta: float) -> void:
 		if current_interactable and Input.is_action_just_pressed("interact"):
 			if current_interactable.has_method("on_interacted"):
 				current_interactable.on_interacted()
-			_start_dialog(current_interactable.get_current_text_lines())
+			
+			# Получаем реплики (теперь только одну) и запускаем диалог
+			var lines = current_interactable.get_current_text_lines()
+			if not lines.is_empty():
+				_start_dialog(lines)
 		return
 
-	# 2) Если диалог активен — обрабатываем пропуск / переход
+	# 2) Если диалог активен — обрабатываем пропуск / завершение
 	# если печатается — нажатие должно вызвать пропуск
 	if is_typing:
 		if Input.is_action_just_pressed("interact"):
 			skip_requested = true
 		return
 
-	# если допечатано и ждём следующую — нажатие переходит к следующей или завершает
+	# если допечатано и ждём — нажатие завершает диалог
 	if waiting_for_next:
 		if Input.is_action_just_pressed("interact"):
-			waiting_for_next = false
-			_start_next_line()
+			# Переходим к следующей реплике для этого объекта
+			if current_interactable and current_interactable.has_method("advance_to_next_line"):
+				current_interactable.advance_to_next_line()
+			_end_dialog()
 		return
 
 func _end_dialog() -> void:

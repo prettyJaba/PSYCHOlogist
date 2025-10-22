@@ -32,8 +32,33 @@ func _on_lighting_changed(value: bool) -> void:
 	if sprite:
 		sprite.texture = light_texture if value else dark_texture
 
+# Возвращает массив из текущей реплики
 func get_current_text_lines() -> Array[String]:
-	return text_lines_light if is_light_on else text_lines_dark
+	var text_lines = text_lines_light if is_light_on else text_lines_dark
+	if text_lines.is_empty():
+		return []
+	
+	# Получаем текущий индекс из WorldState
+	var object_path = get_path()
+	var current_index = WorldStateManager.get_dialog_index(object_path)
+	
+	# Для объектов с одной репликой всегда возвращаем её
+	if text_lines.size() == 1:
+		return [text_lines[0]]
+	
+	# Для объектов с несколькими репликами возвращаем текущую
+	if current_index < text_lines.size():
+		return [text_lines[current_index]]
+	
+	# На случай ошибки возвращаем первую реплику
+	return [text_lines[0]]
+
+# Метод для перехода к следующей реплике (вызывается после показа диалога)
+func advance_to_next_line() -> void:
+	var text_lines = text_lines_light if is_light_on else text_lines_dark
+	if text_lines.size() > 1:
+		var object_path = get_path()
+		WorldStateManager.advance_dialog_index(object_path, text_lines.size())
 	
 func on_interacted() -> void:
 	if toggles_light_on_interact and (not one_time_only or not has_triggered):
