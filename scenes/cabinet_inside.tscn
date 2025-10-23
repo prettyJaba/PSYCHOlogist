@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://cgsfxh4tpnqt4"]
+[gd_scene load_steps=52 format=3 uid="uid://cgsfxh4tpnqt4"]
 
 [ext_resource type="PackedScene" uid="uid://cud641jyjb6sm" path="res://scenes/mechanics/player.tscn" id="1_ieijp"]
 [ext_resource type="Texture2D" uid="uid://c2iucd0l4myuw" path="res://sprites/items/cabinet/Комната.png" id="2_i1xny"]
@@ -20,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://bmbprm43uin7r" path="res://sprites/items/cabinet/Тумба.png" id="11_2h27k"]
 [ext_resource type="Texture2D" uid="uid://uvqdg1iuqx3l" path="res://sprites/items/cabinet_dark/Мусорка.png" id="11_r2xk1"]
 [ext_resource type="Texture2D" uid="uid://7rjcjsel5h41" path="res://sprites/items/cabinet/ЦветокНапольный.png" id="12_r88g7"]
-[ext_resource type="Script" uid="uid://c6mtye2keh7ur" path="res://scripts/interactable_object_choice.gd" id="13_hfff1"]
 [ext_resource type="Texture2D" uid="uid://bm74hihmauukb" path="res://sprites/items/cabinet_dark/Окно(закрыто).png" id="13_j0xkg"]
 [ext_resource type="Texture2D" uid="uid://m6bkicf8gu4s" path="res://sprites/items/cabinet/Переключатель.png" id="13_o1j7o"]
 [ext_resource type="Texture2D" uid="uid://c5c4yracv5ae8" path="res://sprites/items/cabinet/КартинкаУдвери.png" id="14_bcta6"]
@@ -175,12 +174,6 @@ texture = ExtResource("4_wk054")
 
 [node name="Table" parent="." groups=["interactable"] instance=ExtResource("3_0jqlk")]
 position = Vector2(39, 77)
-script = ExtResource("13_hfff1")
-first_choice_text = "Начать приём"
-second_choice_text = "Ещё осмотреться"
-choice_container_path = NodePath("../../CanvasLayer/ChoiceContainer")
-choice1_path = NodePath("../../CanvasLayer/ChoiceContainer/Choice1")
-choice2_path = NodePath("../../CanvasLayer/ChoiceContainer/Choice2")
 text_lines_dark = Array[String](["Слишком темно, я не смогу так работать. Надо открыть шторы."])
 text_lines_light = Array[String](["Стол из элитного красного дерева. Прослужил мне долгую службу, украшая кабинет.", "Он помогает мне сохранять дистанцию между мной и пациентом."])
 light_texture = ExtResource("5_oyjbg")
