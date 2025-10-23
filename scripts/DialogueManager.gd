@@ -16,6 +16,9 @@ var skip_requested := false
 var current_interactable = null
 var player_node: Node = null
 
+signal dialog_finished(interactable)
+
+
 # --- Подключение объектов ---
 func connect_object(obj: Node) -> void:
 	if not obj.is_connected("player_entered", Callable(self, "_on_interactable_entered")):
@@ -120,6 +123,9 @@ func _end_dialog() -> void:
 	if player_node:
 		player_node.block_movement(false)
 
+	if current_interactable:
+		emit_signal("dialog_finished", current_interactable)
+
 	# сброс состояния
 	current_text_index = 0
 	is_typing = false
@@ -127,3 +133,4 @@ func _end_dialog() -> void:
 	dialog_active = false
 	skip_requested = false
 	text_lines.clear()
+	current_interactable = null

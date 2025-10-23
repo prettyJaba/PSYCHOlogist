@@ -30,6 +30,7 @@ stretch_mode = 4
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="OptionsMenu" parent="CanvasLayer" instance=ExtResource("7_v4di0")]
+oversampling_override = 1.0
 initial_position = 1
 visible = false
 
@@ -41,3 +42,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="ChoiceContainer" type="HBoxContainer" parent="CanvasLayer"]
+visible = false
+offset_left = 341.0
+offset_top = 246.0
+offset_right = 721.0
+offset_bottom = 499.0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="Choice1" type="Button" parent="CanvasLayer/ChoiceContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 28
+
+[node name="Choice2" type="Button" parent="CanvasLayer/ChoiceContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 28
