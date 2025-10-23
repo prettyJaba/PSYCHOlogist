@@ -22,14 +22,14 @@ sprite_frames = ExtResource("3_8uen6")
 animation = &"down_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 13.5)
+position = Vector2(0, 14)
 shape = SubResource("RectangleShape2D_64ie0")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1, 9)
+position = Vector2(0, 9)
 shape = SubResource("CapsuleShape2D_t2frp")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
