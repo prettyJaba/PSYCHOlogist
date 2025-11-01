@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d2ky4e21nhrdy"]
 
-[ext_resource type="Texture2D" uid="uid://ci15ar1fixy5o" path="res://sprites/test/photo_59_2023-10-07_01-38-48.jpg" id="1_2e0sp"]
+[ext_resource type="Texture2D" uid="uid://bm74hihmauukb" path="res://sprites/items/cabinet_dark/Окно(закрыто).png" id="1_2e0sp"]
 
 [node name="computer" type="Node2D"]
 

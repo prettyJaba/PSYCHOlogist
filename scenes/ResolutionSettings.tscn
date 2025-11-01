@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dujvktpkrb4ot"]
+[gd_scene load_steps=2 format=3 uid="uid://c4ky5eb6c2mxw"]
 
-[ext_resource type="Script" uid="uid://ds5o0g886d2e2" path="res://scripts/ResolutionSettings.gd" id="1_m17lk"]
+[ext_resource type="Script" uid="uid://bgnl48pd5ub82" path="res://scripts/ResolutionSettings.gd" id="1_m17lk"]
 
 [node name="ResolutionSettings" type="Control"]
 layout_mode = 3
