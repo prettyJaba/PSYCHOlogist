@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://y5qte6tas1qu"]
+[gd_scene load_steps=6 format=3 uid="uid://y5qte6tas1qu"]
 
-[ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_b73ty"]
+[ext_resource type="Script" uid="uid://diyuy02m85wei" path="res://scripts/MainMenu.gd" id="1_b73ty"]
 [ext_resource type="PackedScene" uid="uid://cftiftdwtafru" path="res://scenes/main/options_menu.tscn" id="2_2dcf4"]
-[ext_resource type="FontFile" uid="uid://cj6p6mvtslqc8" path="res://style/fonts/ShareTechMono.otf" id="2_t1k8f"]
-[ext_resource type="Texture2D" uid="uid://capbnwggbjawr" path="res://sprites/background/2kPvsQM1i_E.jpg" id="3_4akt0"]
+[ext_resource type="FontFile" uid="uid://p2auo6hb81dn" path="res://style/fonts/Undertale-Battle-Font.ttf" id="2_hiibk"]
+[ext_resource type="Texture2D" uid="uid://khsu843fgs3a" path="res://sprites/background/1.jpg" id="4_swlpu"]
+[ext_resource type="Theme" uid="uid://cufriujllu55" path="res://style/menuNames.tres" id="5_nm0l4"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -23,7 +24,7 @@ offset_bottom = 1121.0
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("2_t1k8f")
+theme_override_fonts/font = ExtResource("2_hiibk")
 theme_override_font_sizes/font_size = 52
 text = "Начать новую игру"
 
@@ -31,7 +32,7 @@ text = "Начать новую игру"
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("2_t1k8f")
+theme_override_fonts/font = ExtResource("2_hiibk")
 theme_override_font_sizes/font_size = 52
 text = "Продолжить"
 
@@ -39,7 +40,7 @@ text = "Продолжить"
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("2_t1k8f")
+theme_override_fonts/font = ExtResource("2_hiibk")
 theme_override_font_sizes/font_size = 52
 text = "Настройки"
 
@@ -47,7 +48,7 @@ text = "Настройки"
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("2_t1k8f")
+theme_override_fonts/font = ExtResource("2_hiibk")
 theme_override_font_sizes/font_size = 52
 text = "Выход"
 
@@ -61,11 +62,25 @@ z_index = -5
 z_as_relative = false
 layout_mode = 0
 offset_left = 3.0
-offset_right = 1283.0
-offset_bottom = 923.0
+offset_right = 1276.0
+offset_bottom = 717.0
 mouse_filter = 2
-texture = ExtResource("3_4akt0")
+texture = ExtResource("4_swlpu")
 expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 137.0
+offset_right = 1286.0
+offset_bottom = 923.0
+theme = ExtResource("5_nm0l4")
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.9647059)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 90
+text = "PSYCHOlogic"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_newGameButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continueButton_pressed"]

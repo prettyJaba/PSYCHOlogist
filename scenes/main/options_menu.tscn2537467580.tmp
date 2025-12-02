@@ -27,23 +27,11 @@ offset_left = 4.0
 offset_top = 4.0
 offset_right = 686.0
 offset_bottom = 546.0
-mouse_filter = 2
 
-[node name="Background" type="TextureRect" parent="ContentRoot"]
-texture_filter = 1
-layout_mode = 0
-offset_left = -15.0
-offset_top = 1.0
-offset_right = 667.0
-offset_bottom = 543.0
-texture = ExtResource("2_c467w")
-stretch_mode = 5
-
-[node name="GraphicPage" parent="ContentRoot" instance=ExtResource("2_6hvfi")]
+[node name="ResolutionSettings2" parent="ContentRoot" instance=ExtResource("2_6hvfi")]
 visible = false
 z_index = 1
 layout_mode = 1
-offset_right = -6.1035156e-05
 
 [node name="SavePage" parent="ContentRoot" instance=ExtResource("5_c467w")]
 visible = false
@@ -61,12 +49,22 @@ offset_bottom = 542.0
 size_flags_horizontal = 0
 size_flags_vertical = 6
 
+[node name="Background" type="TextureRect" parent="ContentRoot"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -15.0
+offset_top = 1.0
+offset_right = 667.0
+offset_bottom = 543.0
+texture = ExtResource("2_c467w")
+stretch_mode = 5
+
 [node name="TabsContainer" type="VBoxContainer" parent="ContentRoot"]
 layout_direction = 3
 layout_mode = 0
-offset_left = 10.0
+offset_left = 6.0
 offset_top = 103.0
-offset_right = 106.0
+offset_right = 102.0
 offset_bottom = 397.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
