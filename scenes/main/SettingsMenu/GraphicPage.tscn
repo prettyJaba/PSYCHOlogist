@@ -1,0 +1,129 @@
+[gd_scene load_steps=5 format=3 uid="uid://dujvktpkrb4ot"]
+
+[ext_resource type="Script" uid="uid://bgnl48pd5ub82" path="res://scripts/ResolutionSettings.gd" id="1_m17lk"]
+[ext_resource type="Theme" uid="uid://cufriujllu55" path="res://style/menuNames.tres" id="2_2chfe"]
+[ext_resource type="Texture2D" uid="uid://daas7psb64pho" path="res://sprites/ui/test.png" id="3_g5qag"]
+[ext_resource type="Texture2D" uid="uid://c16eynox5i83k" path="res://sprites/ui/settings_background2.png" id="4_88in8"]
+
+[node name="GraphicPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m17lk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 109.0
+offset_right = 596.0
+offset_bottom = 498.0
+theme_override_constants/separation = 5
+
+[node name="LeftPage" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 25
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/LeftPage"]
+layout_mode = 2
+theme_override_constants/margin_top = 13
+
+[node name="Label" type="Label" parent="HBoxContainer/LeftPage/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("2_2chfe")
+text = "Разрешение"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="resolutions_list" type="VBoxContainer" parent="HBoxContainer/LeftPage"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
+layout_mode = 2
+theme = ExtResource("2_2chfe")
+text = "1024x768"
+
+[node name="CheckBox2" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
+layout_mode = 2
+theme = ExtResource("2_2chfe")
+text = "1280x720"
+
+[node name="CheckBox3" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
+layout_mode = 2
+theme = ExtResource("2_2chfe")
+text = "1366x768
+"
+
+[node name="CheckBox4" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
+layout_mode = 2
+theme = ExtResource("2_2chfe")
+text = "1920x1080
+"
+
+[node name="CheckBox5" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
+layout_mode = 2
+theme = ExtResource("2_2chfe")
+text = "2560x1440"
+
+[node name="RightPage" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/RightPage"]
+layout_mode = 2
+theme_override_constants/margin_top = 13
+
+[node name="Label" type="Label" parent="HBoxContainer/RightPage/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("2_2chfe")
+text = "Режим окна"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/RightPage"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 15
+
+[node name="window_modes_list" type="VBoxContainer" parent="HBoxContainer/RightPage/MarginContainer2"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/RightPage/MarginContainer2/window_modes_list"]
+layout_mode = 2
+theme = ExtResource("2_2chfe")
+text = "Оконный"
+
+[node name="CheckBox2" type="CheckBox" parent="HBoxContainer/RightPage/MarginContainer2/window_modes_list"]
+layout_mode = 2
+theme = ExtResource("2_2chfe")
+text = "Полноэкранный"
+
+[node name="CheckBox3" type="CheckBox" parent="HBoxContainer/RightPage/MarginContainer2/window_modes_list"]
+layout_mode = 2
+theme = ExtResource("2_2chfe")
+text = "Полноэкранный с рамкой"
+
+[node name="ApplyButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 436.0
+offset_right = 582.0
+offset_bottom = 474.0
+texture_normal = ExtResource("3_g5qag")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Background" type="TextureRect" parent="."]
+visible = false
+z_index = -2
+texture_filter = 1
+layout_mode = 0
+offset_left = -15.0
+offset_top = 1.0
+offset_right = 667.0
+offset_bottom = 543.0
+texture = ExtResource("4_88in8")
+stretch_mode = 5
