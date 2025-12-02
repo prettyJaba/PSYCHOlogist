@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cya508uj8ajgm"]
+[gd_scene load_steps=5 format=3 uid="uid://cya508uj8ajgm"]
 
-[ext_resource type="Script" path="res://scripts/interactable_object.gd" id="1_r8tak"]
+[ext_resource type="Script" uid="uid://bodms5mshrg5y" path="res://scripts/interactable_object.gd" id="1_r8tak"]
+[ext_resource type="Script" uid="uid://car5ry1fxubtx" path="res://scripts/CollisionShapeUnique.gd" id="2_csocs"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xep0e"]
-size = Vector2(56, 74)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_csocs"]
+size = Vector2(6, 26)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mturt"]
-size = Vector2(47, 65)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_607ra"]
+size = Vector2(6, 9)
 
 [node name="InteractableObject" type="Node2D"]
 script = ExtResource("1_r8tak")
@@ -15,12 +16,16 @@ script = ExtResource("1_r8tak")
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_xep0e")
+shape = SubResource("RectangleShape2D_csocs")
+debug_color = Color(0.80784315, 0.32941177, 0.64705884, 0.41960785)
+script = ExtResource("2_csocs")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_mturt")
+shape = SubResource("RectangleShape2D_607ra")
+debug_color = Color(0, 0.6, 0.7019608, 0.41960785)
+script = ExtResource("2_csocs")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
