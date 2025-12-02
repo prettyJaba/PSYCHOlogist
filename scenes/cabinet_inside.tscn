@@ -50,16 +50,16 @@ size = Vector2(6, 24)
 size = Vector2(6, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxtih"]
-size = Vector2(39, 53)
+size = Vector2(36, 53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwd05"]
-size = Vector2(35, 50)
+size = Vector2(35, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8knae"]
 size = Vector2(61, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ks0oh"]
-size = Vector2(58, 18)
+size = Vector2(58, 17)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkas2"]
 radius = 7.0
@@ -79,13 +79,13 @@ radius = 4.0
 height = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0x2bu"]
-size = Vector2(43, 13)
+size = Vector2(38, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wo2bw"]
 size = Vector2(13, 18.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtsax"]
-size = Vector2(37, 53)
+size = Vector2(35, 53)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t0tcd"]
 size = Vector2(28, 16)
@@ -93,7 +93,7 @@ size = Vector2(28, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uo4wm"]
 size = Vector2(2, 2)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_277wn"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_432yb"]
 radius = 5.0
 height = 14.0
 
@@ -101,12 +101,12 @@ height = 14.0
 size = Vector2(22, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prdft"]
-size = Vector2(33, 29)
+size = Vector2(33, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mix4d"]
 size = Vector2(14, 12)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6sdht"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v1era"]
 radius = 4.0
 height = 12.000001
 
@@ -216,11 +216,12 @@ light_texture = ExtResource("4_wk054")
 dark_texture = ExtResource("5_yyagc")
 
 [node name="CollisionShape2D" parent="Library/Area2D" index="0"]
-position = Vector2(-1.5, 0.5)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_lxtih")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Library/StaticBody2D" index="0"]
+position = Vector2(0, 20.5)
 shape = SubResource("RectangleShape2D_rwd05")
 
 [node name="Sprite2D" type="Sprite2D" parent="Library"]
@@ -241,7 +242,7 @@ shape = SubResource("RectangleShape2D_8knae")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Table/StaticBody2D" index="0"]
-position = Vector2(9, 13)
+position = Vector2(9, 13.5)
 shape = SubResource("RectangleShape2D_ks0oh")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Table/StaticBody2D" index="1"]
@@ -309,7 +310,7 @@ dark_texture = ExtResource("13_j0xkg")
 toggles_light_on_interact = true
 
 [node name="CollisionShape2D" parent="Window/Area2D" index="0"]
-position = Vector2(2.5, 16.5)
+position = Vector2(2, 16.5)
 shape = SubResource("RectangleShape2D_0x2bu")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
@@ -329,7 +330,7 @@ light_texture = ExtResource("9_rr7ft")
 dark_texture = ExtResource("15_hfff1")
 
 [node name="CollisionShape2D" parent="Certificates/Area2D" index="0"]
-position = Vector2(0, 17.5)
+position = Vector2(-0.5, 17.5)
 shape = SubResource("RectangleShape2D_qtsax")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
@@ -353,7 +354,7 @@ debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 [node name="CollisionShape2D" parent="Chair/StaticBody2D" index="0"]
 position = Vector2(0, 9)
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_277wn")
+shape = SubResource("CapsuleShape2D_432yb")
 
 [node name="Sprite2D" type="Sprite2D" parent="Chair"]
 texture = ExtResource("10_60yx0")
@@ -370,7 +371,7 @@ shape = SubResource("RectangleShape2D_yk0np")
 debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Closet/StaticBody2D" index="0"]
-position = Vector2(0.5, 4.5)
+position = Vector2(0.5, 14.5)
 shape = SubResource("RectangleShape2D_prdft")
 
 [node name="Sprite2D" type="Sprite2D" parent="Closet"]
@@ -391,7 +392,7 @@ debug_color = Color(0.807735, 0.329025, 0.647582, 0.42)
 
 [node name="CollisionShape2D" parent="Flower/StaticBody2D" index="0"]
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_6sdht")
+shape = SubResource("CapsuleShape2D_v1era")
 
 [node name="Sprite2D" type="Sprite2D" parent="Flower"]
 texture = ExtResource("12_r88g7")
