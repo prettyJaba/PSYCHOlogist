@@ -4,8 +4,9 @@
 [ext_resource type="SpriteFrames" uid="uid://bvn62viqo7mim" path="res://sprites/characters/viktor/player_light.tres" id="2_uqnlf"]
 [ext_resource type="SpriteFrames" uid="uid://ctc2l0jqxegj3" path="res://sprites/characters/viktor/player_dark.tres" id="3_8uen6"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_64ie0"]
-size = Vector2(14, 5)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8uen6"]
+radius = 2.0
+height = 12.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t2frp"]
 radius = 7.0
@@ -23,7 +24,8 @@ animation = &"down_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 14)
-shape = SubResource("RectangleShape2D_64ie0")
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_8uen6")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
