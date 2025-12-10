@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bjflobvs47vvv"]
 
 [ext_resource type="Script" uid="uid://17eposnhg7to" path="res://scripts/DialogueManager.gd" id="1_kiug4"]
-[ext_resource type="FontFile" uid="uid://cj6p6mvtslqc8" path="res://style/fonts/ShareTechMono.otf" id="2_jgirf"]
+[ext_resource type="Theme" uid="uid://cs8uixkfosjsg" path="res://style/text.tres" id="2_1onk5"]
 
 [node name="UI" type="Node2D"]
 script = ExtResource("1_kiug4")
@@ -22,11 +22,8 @@ size_flags_vertical = 3
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Panel"]
 clip_contents = false
 layout_mode = 0
-offset_right = 1242.0
+offset_left = 22.0
+offset_top = 2.0
+offset_right = 1220.0
 offset_bottom = 135.0
-theme_override_fonts/normal_font = ExtResource("2_jgirf")
-theme_override_fonts/bold_font = ExtResource("2_jgirf")
-theme_override_fonts/bold_italics_font = ExtResource("2_jgirf")
-theme_override_fonts/italics_font = ExtResource("2_jgirf")
-theme_override_fonts/mono_font = ExtResource("2_jgirf")
-theme_override_font_sizes/normal_font_size = 48
+theme = ExtResource("2_1onk5")

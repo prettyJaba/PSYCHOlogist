@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfqcgcy1caatn"]
+[gd_scene load_steps=8 format=3 uid="uid://dfqcgcy1caatn"]
 
-[ext_resource type="Theme" uid="uid://cufriujllu55" path="res://style/menuNames.tres" id="1_22lw0"]
+[ext_resource type="Theme" uid="uid://cufriujllu55" path="res://style/menu_names.tres" id="1_22lw0"]
 [ext_resource type="Script" uid="uid://8vv553rbg716" path="res://scenes/main/SettingsMenu/audio_page.gd" id="1_a8xts"]
 [ext_resource type="Texture2D" uid="uid://c2bftgms368k1" path="res://style/slider/Grabber.png" id="2_d4vvx"]
 [ext_resource type="Texture2D" uid="uid://c16eynox5i83k" path="res://sprites/ui/settings_background2.png" id="3_a8xts"]
+[ext_resource type="Theme" uid="uid://bxhs0bhu7undh" path="res://style/menu_labels_checkboxes.tres" id="3_uj3eh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6a7ne"]
 bg_color = Color(0.594448, 0.258733, 0.854812, 1)
@@ -75,15 +76,16 @@ theme_override_constants/margin_left = 27
 [node name="Label" type="Label" parent="RightPage/HBoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("1_22lw0")
+theme = ExtResource("3_uj3eh")
+theme_override_font_sizes/font_size = 18
 text = "Музыка"
 
 [node name="MarginContainer2" type="MarginContainer" parent="RightPage/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_right = 10
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_right = 25
 
 [node name="HSlider" type="HSlider" parent="RightPage/HBoxContainer/MarginContainer2"]
 layout_mode = 2
@@ -107,7 +109,8 @@ theme_override_constants/margin_left = 27
 [node name="Label" type="Label" parent="RightPage/HBoxContainer2/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme = ExtResource("1_22lw0")
+theme = ExtResource("3_uj3eh")
+theme_override_font_sizes/font_size = 18
 text = "Эффекты"
 
 [node name="MarginContainer2" type="MarginContainer" parent="RightPage/HBoxContainer2"]
@@ -115,7 +118,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_override_constants/margin_left = 4
-theme_override_constants/margin_right = 10
+theme_override_constants/margin_right = 24
 
 [node name="HSlider" type="HSlider" parent="RightPage/HBoxContainer2/MarginContainer2"]
 layout_mode = 2

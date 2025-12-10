@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cufriujllu55"]
+
+[ext_resource type="FontFile" uid="uid://p2auo6hb81dn" path="res://style/fonts/Undertale-Battle-Font.ttf" id="1_3ubiu"]
+
+[resource]
+default_font = ExtResource("1_3ubiu")
+default_font_size = 16
+CheckBox/colors/font_color = Color(0.00011382764, 0.00011382824, 0.000113827795, 1)
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 26

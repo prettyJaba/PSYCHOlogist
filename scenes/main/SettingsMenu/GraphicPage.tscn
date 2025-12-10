@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dujvktpkrb4ot"]
+[gd_scene load_steps=6 format=3 uid="uid://dujvktpkrb4ot"]
 
 [ext_resource type="Script" uid="uid://bgnl48pd5ub82" path="res://scripts/ResolutionSettings.gd" id="1_m17lk"]
-[ext_resource type="Theme" uid="uid://cufriujllu55" path="res://style/menuNames.tres" id="2_2chfe"]
+[ext_resource type="Theme" uid="uid://cufriujllu55" path="res://style/menu_names.tres" id="2_2chfe"]
+[ext_resource type="Theme" uid="uid://bxhs0bhu7undh" path="res://style/menu_labels_checkboxes.tres" id="3_88in8"]
 [ext_resource type="Texture2D" uid="uid://daas7psb64pho" path="res://sprites/ui/test.png" id="3_g5qag"]
 [ext_resource type="Texture2D" uid="uid://c16eynox5i83k" path="res://sprites/ui/settings_background2.png" id="4_88in8"]
 
@@ -43,29 +44,29 @@ layout_mode = 2
 
 [node name="CheckBox" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
 layout_mode = 2
-theme = ExtResource("2_2chfe")
+theme = ExtResource("3_88in8")
 text = "1024x768"
 
 [node name="CheckBox2" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
 layout_mode = 2
-theme = ExtResource("2_2chfe")
+theme = ExtResource("3_88in8")
 text = "1280x720"
 
 [node name="CheckBox3" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
 layout_mode = 2
-theme = ExtResource("2_2chfe")
+theme = ExtResource("3_88in8")
 text = "1366x768
 "
 
 [node name="CheckBox4" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
 layout_mode = 2
-theme = ExtResource("2_2chfe")
+theme = ExtResource("3_88in8")
 text = "1920x1080
 "
 
 [node name="CheckBox5" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
 layout_mode = 2
-theme = ExtResource("2_2chfe")
+theme = ExtResource("3_88in8")
 text = "2560x1440"
 
 [node name="RightPage" type="VBoxContainer" parent="HBoxContainer"]
@@ -93,17 +94,17 @@ layout_mode = 2
 
 [node name="CheckBox" type="CheckBox" parent="HBoxContainer/RightPage/MarginContainer2/window_modes_list"]
 layout_mode = 2
-theme = ExtResource("2_2chfe")
+theme = ExtResource("3_88in8")
 text = "Оконный"
 
 [node name="CheckBox2" type="CheckBox" parent="HBoxContainer/RightPage/MarginContainer2/window_modes_list"]
 layout_mode = 2
-theme = ExtResource("2_2chfe")
+theme = ExtResource("3_88in8")
 text = "Полноэкранный"
 
 [node name="CheckBox3" type="CheckBox" parent="HBoxContainer/RightPage/MarginContainer2/window_modes_list"]
 layout_mode = 2
-theme = ExtResource("2_2chfe")
+theme = ExtResource("3_88in8")
 text = "Полноэкранный с рамкой"
 
 [node name="ApplyButton" type="TextureButton" parent="."]
@@ -117,7 +118,6 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Background" type="TextureRect" parent="."]
-visible = false
 z_index = -2
 texture_filter = 1
 layout_mode = 0

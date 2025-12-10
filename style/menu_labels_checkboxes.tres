@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bxhs0bhu7undh"]
+
+[ext_resource type="FontFile" uid="uid://63fb21ikykn1" path="res://style/fonts/ofont.ru_Fixedsys.ttf" id="1_myqqj"]
+
+[resource]
+default_font = ExtResource("1_myqqj")
+CheckBox/colors/font_color = Color(0.10374334, 0.10374365, 0.10374341, 1)
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 16

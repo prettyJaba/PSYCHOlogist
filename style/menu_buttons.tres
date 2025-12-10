@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://wjfhjc2dq0lx"]
+
+[ext_resource type="FontFile" uid="uid://p2auo6hb81dn" path="res://style/fonts/Undertale-Battle-Font.ttf" id="1_hnfvq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hnfvq"]
+
+[resource]
+default_font = ExtResource("1_hnfvq")
+Button/colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0.8392157)
+Button/font_sizes/font_size = 48
+Button/styles/focus = SubResource("StyleBoxEmpty_hnfvq")

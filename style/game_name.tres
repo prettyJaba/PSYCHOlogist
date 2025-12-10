@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://krv1gkrgj2ny"]
+
+[ext_resource type="FontFile" uid="uid://63fb21ikykn1" path="res://style/fonts/ofont.ru_Fixedsys.ttf" id="1_yc71h"]
+
+[resource]
+default_font = ExtResource("1_yc71h")
+Label/colors/font_shadow_color = Color(0.7882353, 0.5176471, 0, 0.3529412)
+Label/constants/shadow_offset_x = 8
+Label/constants/shadow_offset_y = 1
+Label/font_sizes/font_size = 73

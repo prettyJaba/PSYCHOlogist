@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cs8uixkfosjsg"]
+
+[ext_resource type="FontFile" uid="uid://p2auo6hb81dn" path="res://style/fonts/Undertale-Battle-Font.ttf" id="1_tsve7"]
+
+[resource]
+default_font = ExtResource("1_tsve7")
+default_font_size = 42
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
