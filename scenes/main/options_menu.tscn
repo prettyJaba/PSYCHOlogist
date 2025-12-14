@@ -100,3 +100,5 @@ root_node = NodePath("../..")
 [node name="PopupConfirmExit" type="PopupPanel" parent="ContentRoot"]
 oversampling_override = 1.0
 initial_position = 1
+
+[connection signal="pressed" from="ContentRoot/TabsContainer/TabButtonExit" to="." method="_on_exit_button_pressed"]
