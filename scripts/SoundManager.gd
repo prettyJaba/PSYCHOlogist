@@ -10,6 +10,9 @@ var sfx_volume := 1.0
 var music_tracks := {}
 var sfx_tracks := {}
 
+var active_sfx_players: Array[AudioStreamPlayer] = []
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	init_tracks()
@@ -43,19 +46,35 @@ func play_music(name: String, loop := true):
 	
 func stop_music():
 	music_player.stop()
+func stop_all_sfx() -> void:
+	for player in active_sfx_players:
+		if is_instance_valid(player):
+			player.stop()
+			player.queue_free()
+	active_sfx_players.clear()
+
 	
 # --- Эффекты ---
 func play_sfx(name: String):
 	if not sfx_tracks.has(name):
 		push_error("SFX not registered: %s" % name)
 		return
+
 	var track = sfx_tracks[name]
 	var player = AudioStreamPlayer.new()
 	player.bus = "SFX"
 	player.stream = track
 	add_child(player)
+
+	active_sfx_players.append(player)
+
 	player.play()
-	player.finished.connect(func(): player.queue_free())
+
+	player.finished.connect(func():
+		active_sfx_players.erase(player)
+		player.queue_free()
+	)
+
 
 # --- Громкость ---
 func set_music_volume(value: float):
@@ -74,7 +93,7 @@ func apply_volumes():
 # сюда нужно загрузить все звуки/музыку
 func init_tracks():
 	# Музыка
-	register_music("main", "res://sounds/music/Peritune_Moonlit_Overture-chosic.com_.mp3")
+	register_music("main", "res://sounds/music/vanishinghope.mp3")
 
 	# Звуки
 	register_sfx("text", "res://sounds/sfx/Press button.mp3")

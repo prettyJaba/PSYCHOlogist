@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bgnl48pd5ub82" path="res://scripts/ResolutionSettings.gd" id="1_m17lk"]
 [ext_resource type="Theme" uid="uid://cufriujllu55" path="res://style/menu_names.tres" id="2_2chfe"]
+[ext_resource type="Texture2D" uid="uid://drnx06pb6x5dh" path="res://sprites/ui/GraphicPage.png" id="2_g5qag"]
 [ext_resource type="Theme" uid="uid://bxhs0bhu7undh" path="res://style/menu_labels_checkboxes.tres" id="3_88in8"]
 [ext_resource type="Texture2D" uid="uid://daas7psb64pho" path="res://sprites/ui/test.png" id="3_g5qag"]
-[ext_resource type="Texture2D" uid="uid://c16eynox5i83k" path="res://sprites/ui/settings_background2.png" id="4_88in8"]
 
 [node name="GraphicPage" type="Control"]
 layout_mode = 3
@@ -14,6 +14,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m17lk")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -2
+texture_filter = 1
+layout_mode = 0
+offset_left = -15.0
+offset_top = 1.0
+offset_right = 667.0
+offset_bottom = 543.0
+texture = ExtResource("2_g5qag")
+stretch_mode = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -30,7 +41,7 @@ theme_override_constants/separation = 25
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/LeftPage"]
 layout_mode = 2
-theme_override_constants/margin_top = 13
+theme_override_constants/margin_top = 8
 
 [node name="Label" type="Label" parent="HBoxContainer/LeftPage/MarginContainer"]
 layout_mode = 2
@@ -39,35 +50,41 @@ text = "Разрешение"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="resolutions_list" type="VBoxContainer" parent="HBoxContainer/LeftPage"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/LeftPage"]
 layout_mode = 2
 
-[node name="CheckBox" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
+[node name="resolutions_list" type="VBoxContainer" parent="HBoxContainer/LeftPage/HBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/LeftPage/HBoxContainer/resolutions_list"]
 layout_mode = 2
 theme = ExtResource("3_88in8")
 text = "1024x768"
 
-[node name="CheckBox2" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
+[node name="CheckBox2" type="CheckBox" parent="HBoxContainer/LeftPage/HBoxContainer/resolutions_list"]
 layout_mode = 2
 theme = ExtResource("3_88in8")
 text = "1280x720"
 
-[node name="CheckBox3" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
+[node name="CheckBox3" type="CheckBox" parent="HBoxContainer/LeftPage/HBoxContainer/resolutions_list"]
 layout_mode = 2
 theme = ExtResource("3_88in8")
 text = "1366x768
 "
 
-[node name="CheckBox4" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/LeftPage/HBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox5" type="CheckBox" parent="HBoxContainer/LeftPage/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_88in8")
+text = "2560x1440"
+
+[node name="CheckBox4" type="CheckBox" parent="HBoxContainer/LeftPage/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_88in8")
 text = "1920x1080
 "
-
-[node name="CheckBox5" type="CheckBox" parent="HBoxContainer/LeftPage/resolutions_list"]
-layout_mode = 2
-theme = ExtResource("3_88in8")
-text = "2560x1440"
 
 [node name="RightPage" type="VBoxContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -76,12 +93,12 @@ theme_override_constants/separation = 10
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/RightPage"]
 layout_mode = 2
-theme_override_constants/margin_top = 13
+theme_override_constants/margin_top = 8
 
 [node name="Label" type="Label" parent="HBoxContainer/RightPage/MarginContainer"]
 layout_mode = 2
 theme = ExtResource("2_2chfe")
-text = "Режим окна"
+text = "Экран"
 horizontal_alignment = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/RightPage"]
@@ -108,6 +125,7 @@ theme = ExtResource("3_88in8")
 text = "Полноэкранный с рамкой"
 
 [node name="ApplyButton" type="TextureButton" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 535.0
 offset_top = 436.0
@@ -116,14 +134,3 @@ offset_bottom = 474.0
 texture_normal = ExtResource("3_g5qag")
 ignore_texture_size = true
 stretch_mode = 0
-
-[node name="Background" type="TextureRect" parent="."]
-z_index = -2
-texture_filter = 1
-layout_mode = 0
-offset_left = -15.0
-offset_top = 1.0
-offset_right = 667.0
-offset_bottom = 543.0
-texture = ExtResource("4_88in8")
-stretch_mode = 5

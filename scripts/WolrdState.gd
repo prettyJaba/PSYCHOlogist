@@ -36,3 +36,14 @@ func advance_dialog_index(object_path: String, max_lines: int) -> int:
 	var next_index = (current_index + 1) % max_lines
 	set_dialog_index(object_path, next_index)
 	return next_index
+
+# сброс при выходе
+func reset() -> void:
+	# Сброс света
+	set_light_state(false)
+
+	# Сброс диалогов
+	object_dialog_indices.clear()
+	
+	SoundManager.stop_all_sfx()
+	SoundManager.stop_music()

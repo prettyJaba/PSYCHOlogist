@@ -13,7 +13,14 @@ extends PopupPanel
 @onready var tab_sound: TextureButton = $ContentRoot/TabsContainer/TabButtonSound
 @onready var tab_screen: TextureButton = $ContentRoot/TabsContainer/TabButtonScreen
 @onready var tab_save: TextureButton = $ContentRoot/TabsContainer/TabButtonSave
-@onready var tab_exit: TextureButton = $ContentRoot/TabsContainer/TabButtonExit
+@onready var tab_exit: TextureButton = $ContentRoot/TabButtonExit
+
+# --------------------------------------------------
+# Popup на подтверждение выхода
+# --------------------------------------------------
+@onready var exit_popup: PopupPanel = $ContentRoot/PopupConfirmExit
+@onready var exit_yes: TextureButton = $ContentRoot/PopupConfirmExit/Layout/OkExitConfirm
+@onready var exit_no: TextureButton = $ContentRoot/PopupConfirmExit/Layout/NotExitConfirm
 
 # --------------------------------------------------
 # При инициализации
@@ -29,6 +36,7 @@ func _ready() -> void:
 	graphic_page.visible = false
 	save_page.visible = false
 	audio_page.visible = true
+	tab_sound.button_pressed = true
 
 	# --- Настраиваем аудио-слайдеры ---
 	_setup_audio_sliders()
@@ -41,6 +49,9 @@ func _ready() -> void:
 	tab_screen.pressed.connect(Callable(self, "_switch_page").bind(graphic_page))
 	tab_save.pressed.connect(Callable(self, "_switch_page").bind(save_page))
 	tab_exit.pressed.connect(Callable(self, "_show_exit_popup"))
+	exit_yes.pressed.connect(_confirm_exit)
+	exit_no.pressed.connect(_cancel_exit)
+
 
 
 # --------------------------------------------------
@@ -105,11 +116,19 @@ func load_settings() -> void:
 # Popup выхода
 # --------------------------------------------------
 func _show_exit_popup() -> void:
-	var exit_popup: PopupPanel = $ContentRoot/PopupConfirmExit
 	exit_popup.popup_centered()
 
 # --------------------------------------------------
 # Выход в меню
 # --------------------------------------------------
-func _on_exit_button_pressed():
+func _confirm_exit() -> void:
+	exit_popup.hide()
+	WorldStateManager.reset()
+	call_deferred("_go_to_main_menu")
+
+func _go_to_main_menu() -> void:
 	get_tree().change_scene_to_file("res://scenes/main/main_menu.tscn")
+
+
+func _cancel_exit() -> void:
+	exit_popup.hide()

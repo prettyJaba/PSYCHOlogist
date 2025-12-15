@@ -7,4 +7,4 @@ default_font = ExtResource("1_3ubiu")
 default_font_size = 16
 CheckBox/colors/font_color = Color(0.00011382764, 0.00011382824, 0.000113827795, 1)
 Label/colors/font_color = Color(0, 0, 0, 1)
-Label/font_sizes/font_size = 26
+Label/font_sizes/font_size = 23

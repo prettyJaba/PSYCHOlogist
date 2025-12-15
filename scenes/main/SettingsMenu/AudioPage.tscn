@@ -26,6 +26,17 @@ offset_right = 1280.0
 offset_bottom = 720.0
 script = ExtResource("1_a8xts")
 
+[node name="Background" type="TextureRect" parent="."]
+z_index = -1
+texture_filter = 1
+layout_mode = 0
+offset_left = -15.0
+offset_top = 1.0
+offset_right = 667.0
+offset_bottom = 543.0
+texture = ExtResource("3_a8xts")
+stretch_mode = 5
+
 [node name="LeftPage" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 67.0
@@ -35,7 +46,7 @@ offset_bottom = 498.0
 
 [node name="MarginContainer" type="MarginContainer" parent="LeftPage"]
 layout_mode = 2
-theme_override_constants/margin_top = 13
+theme_override_constants/margin_top = 6
 
 [node name="Label" type="Label" parent="LeftPage/MarginContainer"]
 layout_mode = 2
@@ -56,7 +67,7 @@ offset_bottom = 498.0
 
 [node name="MarginContainer3" type="MarginContainer" parent="RightPage"]
 layout_mode = 2
-theme_override_constants/margin_top = 13
+theme_override_constants/margin_top = 6
 theme_override_constants/margin_bottom = 20
 
 [node name="Label" type="Label" parent="RightPage/MarginContainer3"]
@@ -129,15 +140,3 @@ theme_override_icons/grabber_highlight = ExtResource("2_d4vvx")
 theme_override_styles/slider = SubResource("StyleBoxFlat_fyhl2")
 max_value = 1.0
 step = 0.01
-
-[node name="Background" type="TextureRect" parent="."]
-visible = false
-z_index = -1
-texture_filter = 1
-layout_mode = 0
-offset_left = -15.0
-offset_top = 1.0
-offset_right = 667.0
-offset_bottom = 543.0
-texture = ExtResource("3_a8xts")
-stretch_mode = 5
