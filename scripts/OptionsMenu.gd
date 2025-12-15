@@ -107,3 +107,9 @@ func load_settings() -> void:
 func _show_exit_popup() -> void:
 	var exit_popup: PopupPanel = $ContentRoot/PopupConfirmExit
 	exit_popup.popup_centered()
+
+# --------------------------------------------------
+# Выход в меню
+# --------------------------------------------------
+func _on_exit_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/main/main_menu.tscn")
